@@ -508,7 +508,9 @@ and IIS for Windows.
   (some cases can override this, but this is the most common method).
 * The server parses the file according to the handler. If Google
   is running on PHP, the server uses PHP to interpret the index file, and
-  streams the output to the client.
+  streams the output to the clientIn summary, this intricate dance of DNS, TCP/IP, firewalls, encryption, load balancing, web servers, application servers, and databases ensures that when you hit Enter, the desired webpage graces your screen..
+
+
 
 Behind the scenes of the Browser
 ----------------------------------
