@@ -624,6 +624,7 @@ CSS interpretation
 
 * Parse CSS files, ``<style>`` tag contents, and ``style`` attribute
   values using `"CSS lexical and syntax grammar"`_
+* CSS lexical grammar primarily deals with tokenizing the input CSS code, breaking it down into individual tokens such   as selectors, properties, and values. This process involves identifying keywords, identifiers, strings, numbers, and   other lexical elements that make up the CSS syntax.
 * Each CSS file is parsed into a ``StyleSheet object``, where each object
   contains CSS rules with selectors and objects corresponding CSS grammar.
 * A CSS parser can be top-down or bottom-up when a specific parser generator
