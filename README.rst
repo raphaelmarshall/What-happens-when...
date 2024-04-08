@@ -681,31 +681,31 @@ Window Server
 Post-rendering and user-induced execution
 -----------------------------------------
 
-After rendering has been completed, the browser executes JavaScript code as a result
-of some timing mechanism (such as a Google Doodle animation) or user
-interaction (typing a query into the search box and receiving suggestions).
-Plugins such as Flash or Java may execute as well, although not at this time on
-the Google homepage. Scripts can cause additional network requests to be
-performed, as well as modify the page or its layout, causing another round of
-page rendering and painting.
 
-.. _`Creative Commons Zero`: https://creativecommons.org/publicdomain/zero/1.0/
-.. _`"CSS lexical and syntax grammar"`: http://www.w3.org/TR/CSS2/grammar.html
-.. _`Punycode`: https://en.wikipedia.org/wiki/Punycode
-.. _`Ethernet`: http://en.wikipedia.org/wiki/IEEE_802.3
-.. _`WiFi`: https://en.wikipedia.org/wiki/IEEE_802.11
-.. _`Cellular data network`: https://en.wikipedia.org/wiki/Cellular_data_communication_protocol
-.. _`analog-to-digital converter`: https://en.wikipedia.org/wiki/Analog-to-digital_converter
-.. _`network node`: https://en.wikipedia.org/wiki/Computer_network#Network_nodes
-.. _`TCP congestion control`: https://en.wikipedia.org/wiki/TCP_congestion_control
-.. _`cubic`: https://en.wikipedia.org/wiki/CUBIC_TCP
-.. _`New Reno`: https://en.wikipedia.org/wiki/TCP_congestion_control#TCP_New_Reno
-.. _`congestion window`: https://en.wikipedia.org/wiki/TCP_congestion_control#Congestion_window
-.. _`maximum segment size`: https://en.wikipedia.org/wiki/Maximum_segment_size
-.. _`varies by OS` : https://en.wikipedia.org/wiki/Hosts_%28file%29#Location_in_the_file_system
-.. _`简体中文`: https://github.com/skyline75489/what-happens-when-zh_CN
-.. _`한국어`: https://github.com/SantonyChoi/what-happens-when-KR
-.. _`日本語`: https://github.com/tettttsuo/what-happens-when-JA
-.. _`downgrade attack`: http://en.wikipedia.org/wiki/SSL_stripping
-.. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
-.. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
+After the rendering process has completed, the browser continues its operation by executing JavaScript code and handling user interactions. This phase involves various activities triggered by timing mechanisms, user inputs, or plugin executions.
+
+1. **JavaScript Execution:**
+   - Timing Mechanisms: Some actions, such as animations or updates to page content, are initiated based on predefined timers. For example, Google Doodle animations or rotating banners on websites.
+   - Event Handlers: JavaScript code is executed in response to user interactions such as clicks, scrolls, or keystrokes. Event listeners attached to DOM elements trigger corresponding actions when events occur.
+   - Asynchronous Operations: JavaScript can initiate asynchronous operations such as fetching data from servers (AJAX requests), loading additional resources, or executing tasks in the background using Web Workers.
+   - Frameworks and Libraries: Modern web applications often rely on JavaScript frameworks and libraries (e.g., React, Angular, Vue.js) for handling complex interactions and managing state.
+
+2. **Plugin Execution:**
+   - Flash and Java: Although less common in modern web development due to security concerns and the availability of alternative technologies like HTML5 and JavaScript, plugins such as Adobe Flash or Java applets may still be executed if embedded in the webpage.
+   - Other Browser Plugins: Various browser plugins and extensions may execute code or perform tasks as part of their functionality. These could include ad blockers, password managers, or media players.
+
+3. **User Interaction Handling:**
+   - Form Submissions: When a user submits a form, the browser may validate the input data, send it to a server for processing, and handle the server's response (e.g., displaying a confirmation message or updating the page content).
+   - Navigation: Clicking on hyperlinks or using browser navigation buttons triggers the browser to load new pages or retrieve cached content. The URL is updated accordingly, and the browser history may be modified.
+   - Input Processing: User inputs, such as keyboard strokes or mouse clicks, may trigger specific actions or interactions within the webpage or web application. This could include opening menus, selecting items, or initiating animations.
+
+4. **Network Requests:**
+   - Dynamic Content Loading: JavaScript code may dynamically load additional content from servers based on user interactions or predefined conditions. This could include fetching new data for infinite scrolling, loading images or videos on demand, or retrieving updates from social media feeds.
+   - API Calls: Web applications often communicate with backend servers or third-party APIs to retrieve or submit data. This involves making HTTP requests (e.g., GET, POST) using JavaScript's fetch API or other libraries like Axios.
+
+5. **DOM Manipulation and Rendering Updates:**
+   - Dynamic Content Changes: JavaScript code can modify the Document Object Model (DOM) structure of the webpage, adding, removing, or updating elements in response to user actions or data changes.
+   - CSS Manipulation: Stylesheets can be modified dynamically to change the appearance of elements or apply animations and transitions.
+   - Re-rendering: After DOM manipulation or CSS changes, the browser may re-render parts of the page to reflect the updated state. This process ensures that the user interface remains responsive and visually consistent.
+
+In summary, the post-rendering and user-induced execution phase encompasses a wide range of activities, including JavaScript execution, plugin handling, user interaction processing, network requests, and dynamic content updates. These actions contribute to the interactive and dynamic nature of modern web browsing experiences, allowing users to engage with and interact with web content in various ways.
