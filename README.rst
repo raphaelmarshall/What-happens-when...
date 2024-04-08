@@ -709,3 +709,18 @@ page rendering and painting.
 .. _`downgrade attack`: http://en.wikipedia.org/wiki/SSL_stripping
 .. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
 .. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
+
+Add a section on "HTTP/3 and QUIC Protocol"
+
+Description: HTTP/3 is the latest version of the Hypertext Transfer Protocol (HTTP), and it is designed to improve the performance and security of web communication. It uses the QUIC (Quick UDP Internet Connections) protocol, which is built on top of UDP (User Datagram Protocol) instead of TCP. HTTP/3 and QUIC offer several benefits, including reduced latency, improved congestion control, and better support for multiplexing and encryption. In this section, we can explain the key features of HTTP/3 and QUIC, how they differ from previous versions of HTTP, and their impact on web performance and security.
+
+Content Outline:
+
+Introduction to HTTP/3 and QUIC
+Key features and benefits
+Comparison with HTTP/2 and earlier versions
+Implementation considerations for website owners and developers
+Future prospects and adoption trends
+Implementation: Provide a concise overview of HTTP/3 and QUIC, highlighting their significance in modern web development and their potential impact on web performance and security. Include relevant examples and references to authoritative sources for further reading.
+
+By adding this section, you'll contribute to keeping the repository up-to-date with the latest developments in web protocols, benefiting both developers and enthusiasts interested in understanding how the web works under the hood.
