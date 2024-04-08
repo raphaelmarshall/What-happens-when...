@@ -516,6 +516,7 @@ Behind the scenes of the Browser
 Once the server supplies the resources (HTML, CSS, JS, images, etc.)
 to the browser it undergoes the below process:
 
+* Caching - Storing and retrieving data for faster access.
 * Parsing - HTML, CSS, JS
 * Rendering - Construct DOM Tree → Render Tree → Layout of Render Tree →
   Painting the render tree
@@ -570,6 +571,30 @@ The components of the browsers are:
   need to save all sorts of data locally, such as cookies. Browsers also
   support storage mechanisms such as localStorage, IndexedDB, WebSQL and
   FileSystem.
+
+Browser Caching and its Impact on Page Loading
+---------------------------------------------
+Once the browser receives the response from the server containing the requested
+web page and its associated resources (such as images, CSS files, and JavaScript files),
+it may employ caching mechanisms to optimize future page loads.
+
+Upon receiving the resources, the browser checks if they are cacheable based on factors 
+such as cache-control headers sent by the server. If the resources are cacheable and the
+browser's cache policy allows it, the browser stores a local copy of the resources on the
+user's device.
+
+During subsequent visits to the same website or when navigating to other pages within the 
+same website, the browser can retrieve these cached resources instead of re-requesting them
+from the server. This can significantly reduce page load times, as the browser does not need
+to wait for network requests to complete.
+
+However, caching can also have implications for web developers and users. Developers need to 
+manage cache headers effectively to ensure that updates to website content are propagated to
+users in a timely manner. Users may need to clear their browser cache occasionally to ensure
+they are viewing the latest version of a website.
+
+Overall, browser caching plays a crucial role in optimizing web performance and improving the
+browsing experience for users.
 
 HTML parsing
 ------------
