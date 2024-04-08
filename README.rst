@@ -1,5 +1,5 @@
-What happens when...
-====================
+What happens when....
+=====================
 
 This repository is an attempt to answer the age-old interview question "What
 happens when you type google.com into your browser's address box and press
@@ -681,13 +681,7 @@ Window Server
 Post-rendering and user-induced execution
 -----------------------------------------
 
-After rendering has been completed, the browser executes JavaScript code as a result
-of some timing mechanism (such as a Google Doodle animation) or user
-interaction (typing a query into the search box and receiving suggestions).
-Plugins such as Flash or Java may execute as well, although not at this time on
-the Google homepage. Scripts can cause additional network requests to be
-performed, as well as modify the page or its layout, causing another round of
-page rendering and painting.
+Once the rendering process is finished, the browser proceeds to execute JavaScript code triggered by various events, such as timing mechanisms (like a Google Doodle animation) or user interactions (such as entering a search query and receiving suggestions). Although plugins like Flash or Java may execute, they are not active on the Google homepage at present. These scripts have the potential to initiate further network requests and modify the page or its layout, leading to additional rounds of rendering and painting.
 
 .. _`Creative Commons Zero`: https://creativecommons.org/publicdomain/zero/1.0/
 .. _`"CSS lexical and syntax grammar"`: http://www.w3.org/TR/CSS2/grammar.html
