@@ -709,3 +709,25 @@ page rendering and painting.
 .. _`downgrade attack`: http://en.wikipedia.org/wiki/SSL_stripping
 .. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
 .. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
+
+Have you ever wondered what happens behind the scenes when you type a URL like https://www.google.com into your web browser and hit Enter? The process of turning human-readable web addresses into the digital language that computers can understand is a fascinating journey through the intricate workings of the internet.
+
+Let's break down the steps involved in this seemingly simple act of entering a URL and accessing a website:
+
+1. **URL Parsing**: When you type https://www.google.com into your browser's address bar, the browser first parses the URL to understand its components. In this case, "https" is the protocol, "www.google.com" is the domain name.
+
+2. **DNS Resolution**: The browser needs to find out the IP address associated with the domain name www.google.com in order to connect to the server hosting the website. It sends a Domain Name System (DNS) query to a DNS server to resolve the domain name to an IP address.
+
+3. **Initiating a Connection**: Once the browser has the IP address of the server, it initiates a connection to that server using the Hypertext Transfer Protocol Secure (HTTPS) for secure communication. This involves a series of handshakes to establish a secure connection.
+
+4. **Request and Response**: The browser sends an HTTP request to the server, asking for the webpage located at the specified URL. The server processes the request and generates an HTTP response, which includes the webpage content along with other information like headers, status codes, and more.
+
+5. **Rendering the Page**: The browser receives the response from the server and begins to render the webpage using HTML, CSS, and JavaScript. It parses the content to display text, images, links, and interactive elements according to the instructions in the webpage code.
+
+6. **Rendering the Page**: The browser receives the response from the server and begins to render the webpage using HTML, CSS, and JavaScript. It parses the content to display text, images, links, and interactive elements according to the instructions in the webpage code.
+
+7. **Displaying the Page**: Finally, the webpage is rendered on your screen, and you can interact with it by clicking on links, filling out forms, or performing other actions as intended by the website's design.
+
+The entire process, from typing the URL to loading the webpage, takes only a fraction of a second due to the efficiency of modern web technologies and high-speed internet connections. However, the underlying complexity of the steps involved in fetching and displaying a webpage showcases the intricate infrastructure that powers our everyday web browsing experiences.
+
+Next time you type https://www.google.com or any other URL into your browser, remember the journey that your request takes through the vast network of servers, protocols, and technologies that make up the internet as we know it today. 
