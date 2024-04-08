@@ -414,6 +414,19 @@ control`_. This varies depending on the sender; the most common algorithms are
   each packet acknowledged. If a packet is dropped, the window reduces
   exponentially until another packet is acknowledged.
 
+ERROR DETECTION
+--------------
+With error detection and correction mechanisms, pivotal for ensuring the integrity of data 
+during transmission over networks. Among these mechanisms, checksums and 
+CRC (Cyclic Redundancy Check) stand out prominently. Checksums involve computing a 
+value based on the transmitted data, which is then appended to the data itself.
+Upon receipt, the receiver recalculates the checksum and compares it with the received value.
+A match indicates the data's integrity, while discrepancies signify potential corruption. 
+On the other hand, CRC employs a more robust approach, utilizing a polynomial to generate a 
+checksum, which is appended to the data. The recipient performs the same polynomial division 
+and compares the result with the received checksum to identify errors. In cases of detected 
+errors, the receiver can request retransmission of the corrupted data, ensuring the reliability of network communication.
+
 HTTP protocol
 -------------
 
