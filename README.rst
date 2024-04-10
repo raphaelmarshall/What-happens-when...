@@ -675,6 +675,13 @@ GPU Rendering
   the rendering process.
 
 
+When you trying to acces the page that is forbidden to access
+-------------
+* when attempting to access a page that is forbidden to access, the server responds with a 403 Forbidden status code, 
+  and the browser displays an error page or message to inform the user of the access restriction. 
+  This process ensures that users are aware of the restriction and provides guidance on how to proceed.
+
+
 Window Server
 -------------
 
