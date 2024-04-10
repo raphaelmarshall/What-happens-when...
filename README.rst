@@ -414,6 +414,10 @@ control`_. This varies depending on the sender; the most common algorithms are
   each packet acknowledged. If a packet is dropped, the window reduces
   exponentially until another packet is acknowledged.
 
+ FIREWALL
+-------------
+The TCP connection may pass through a firewall, a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules. 
+The firewall ensures that only authorized traffic is allowed to pass through, protecting against malicious attacks. 
 HTTP protocol
 -------------
 
