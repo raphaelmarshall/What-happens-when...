@@ -606,6 +606,45 @@ detail by the HTML5 specification.
 
 The algorithm consists of two stages: tokenization and tree construction.
 
+**HTML5 Parsing Algorithm**
+The `HTML5 parsing algorithm` is a set of rules for transforming a document's
+bytes into a structured representation known as the Document Object Model (DOM).
+The algorithm is designed to be compatible with the way existing web browsers
+parse HTML documents, to ensure that existing web pages continue to work.
+Here's a step-by-step breakdown of the process:
+
+1. **Input Stream of Bytes**: The input to the HTML parsing process consists of
+a stream of bytes, which could be in any encoding. The browser uses various techniques
+to determine the appropriate encoding and convert the bytes into Unicode characters.
+
+2. **Tokenization**: The stream of Unicode characters is then passed through a
+tokenization stage. This stage breaks up the stream of characters into distinct chunks,
+known as tokens. Tokens include start tags, end tags, attribute names and values,
+character data, comments, and more.
+
+3. **Tree Construction**: The tokens are then processed by the tree construction
+stage. This stage involves creating nodes for the elements in the HTML document and
+assembling them into a tree-like structure - the DOM. The tree construction stage
+follows very specific rules to handle complex situations, such as misnested tags
+and implied tag omission.
+
+4. **Dealing with Parse Errors**: The HTML5 specification defines how to handle syntax
+errors. When a syntax error is encountered, the parser applies specific error-handling
+rules and then continues to parse the document. This often involves "fixing" the
+error in a way that matches the behavior of existing web browsers. This is a key part
+of the HTML5 parsing algorithm - it ensures that even badly formed HTML documents are
+parsed in a consistent and predictable way.
+
+5. **Script Execution**: If a script tag is encountered during parsing, the parser may
+need to pause and allow the script to be fetched and executed. This can modify the DOM
+and change the way the rest of the document is parsed.
+
+6. **Output**: The output of the parsing process is a Document object, which can be manipulated
+using JavaScript and rendered by the browser.
+
+This is a high-level overview of the HTML5 parsing algorithm. The actual algorithm is much
+more detailed and handles many edge cases. It's defined in the HTML5 specification.
+
 **Actions when the parsing is finished**
 
 The browser begins fetching external resources linked to the page (CSS, images,
