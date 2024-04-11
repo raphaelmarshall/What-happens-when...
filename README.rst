@@ -2,7 +2,7 @@ What happens when...
 ====================
 
 This repository is an attempt to answer the age-old interview question "What
-happens when you type google.com into your browser's address box and press
+happens when you type `google.com` into your browser's address box and press
 enter?"
 
 Except instead of the usual story, we're going to try to answer this question
@@ -15,7 +15,7 @@ request, please!
 This is all licensed under the terms of the `Creative Commons Zero`_ license.
 
 Read this in `简体中文`_ (simplified Chinese), `日本語`_ (Japanese), `한국어`_
-(Korean) and `Spanish`_. NOTE: these have not been reviewed by the alex/what-happens-when
+(Korean) and `Spanish`_. NOTE: the alex/what-happens-when has not reviewed these
 maintainers.
 
 Table of Contents
@@ -47,10 +47,10 @@ bottom of its range. At this point, an electrical circuit specific to the enter
 key is closed (either directly or capacitively). This allows a small amount of
 current to flow into the logic circuitry of the keyboard, which scans the state
 of each key switch, debounces the electrical noise of the rapid intermittent
-closure of the switch, and converts it to a keycode integer, in this case 13.
+closure of the switch, and converts it to a keycode integer, in this case, 13.
 The keyboard controller then encodes the keycode for transport to the computer.
 This is now almost universally over a Universal Serial Bus (USB) or Bluetooth
-connection, but historically has been over PS/2 or ADB connections.
+connection but historically has been over PS/2 or ADB connections.
 
 *In the case of the USB keyboard:*
 
@@ -68,7 +68,7 @@ connection, but historically has been over PS/2 or ADB connections.
 
 - Those packets are sent by a differential electrical signal over D+ and D-
   pins (the middle 2) at a maximum speed of 1.5 Mb/s, as an HID
-  (Human Interface Device) device is always declared to be a "low-speed device"
+  (Human Interface Device) the device is always declared to be a "low-speed device"
   (USB 2.0 compliance).
 
 - This serial signal is then decoded at the computer's host USB controller, and
