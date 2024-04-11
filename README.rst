@@ -18,11 +18,6 @@ Read this in `简体中文`_ (simplified Chinese), `日本語`_ (Japanese), `한
 (Korean) and `Spanish`_. NOTE: these have not been reviewed by the alex/what-happens-when
 maintainers.
 
-What Happens When...
-====================
-
-This repository is dedicated to unraveling the complexities behind the question: "What happens when you type a URL into your browser's address bar and press enter?" Instead of providing a surface-level answer, we aim to explore each step of the process in detail, leaving no aspect untouched.
-
 Contribution Guidelines
 -----------------------
 
@@ -69,12 +64,6 @@ The repository includes detailed explanations for various stages of the process:
 - GPU Rendering
 - Window Server
 - Post-rendering and user-induced execution
-
-Contributing
-------------
-
-We welcome contributions from everyone. Whether you're a seasoned developer or just starting out, your insights and additions are invaluable to the community. Let's make this resource as comprehensive and accurate as possible together!
-
 
 Table of Contents
 ====================
@@ -767,3 +756,8 @@ page rendering and painting.
 .. _`downgrade attack`: http://en.wikipedia.org/wiki/SSL_stripping
 .. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
 .. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
+
+Contributing
+------------
+
+We welcome contributions from everyone. Whether you're a seasoned developer or just starting out, your insights and additions are invaluable to the community. Let's make this resource as comprehensive and accurate as possible together!
