@@ -1,0 +1,19 @@
+Ever pondered the intricate dance of technology that unfolds behind the scenes when you input a URL into your browser and press Enter? This seemingly mundane action sets off a chain reaction of complex processes seamlessly intertwining to deliver the webpage you seek. In this blog post, we embark on a journey through the lifecycle of a web request, from its initiation to the moment the webpage materializes on your screen.
+
+**DNS Request:** The journey commences with a Domain Name System (DNS) request. When you enter "https://www.google.com" into your browser, your device lacks the whereabouts of "www.google.com." It dispatches a DNS query to a DNS server, beckoning for the IP address tied to the domain name.
+
+**TCP/IP:** Upon receiving the IP address of Google's servers from the DNS server, your device establishes a Transmission Control Protocol (TCP) connection with said address. TCP orchestrates reliable communication by fragmenting data into packets and orchestrating their orderly delivery.
+
+**Firewall:** Prior to reaching Google's servers, your request may traverse a firewall—a digital sentinel that sieves incoming and outgoing traffic based on preordained security protocols. This safeguard shields against unauthorized access and malicious intrusions.
+
+**HTTPS/SSL:** In our scenario, "https://www.google.com" signifies a secure connection via Hypertext Transfer Protocol Secure (HTTPS). This entails encryption of data exchanged between your browser and Google's servers using Secure Sockets Layer (SSL) or Transport Layer Security (TLS), fortifying confidentiality and integrity.
+
+**Load-Balancer:** Google's server infrastructure likely spans numerous data centers to manage the deluge of incoming traffic effectively. A load balancer perches at the gateway of these servers, equitably disseminating incoming requests to optimize performance and prevent server overload.
+
+**Web Server:** Upon arrival at one of Google's web servers, your request undergoes processing as the server retrieves requisite resources—HTML, CSS, JavaScript, and the like—to craft the webpage you seek. The web server may also engage with auxiliary components such as caching servers or content delivery networks (CDNs) to augment speed and reliability.
+
+**Application Server:** In certain instances, the web server may necessitate interaction with an application server to fulfill your request—especially for dynamic content generation or database inquiries. The application server executes requisite code and retrieves data from databases if warranted.
+
+**Database:** If your request entails data retrieval or storage, the application server interfaces with a database server. The database server procures requested information from the database, dispatches any essential operations, and transmits it back to the application server for formatting and eventual presentation on the webpage.
+
+What initially appears as a trifling gesture—entering a URL into your browser—ignites a labyrinthine sequence of events encompassing DNS resolution, network traversal, security fortifications, load balancing, server-side orchestration, and data retrieval. Grasping this process furnishes invaluable insight into the mechanics of the web, benefiting both software engineers and inquisitive users alike.
