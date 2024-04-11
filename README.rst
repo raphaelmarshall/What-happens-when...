@@ -18,6 +18,53 @@ Read this in `简体中文`_ (simplified Chinese), `日本語`_ (Japanese), `한
 (Korean) and `Spanish`_. NOTE: these have not been reviewed by the alex/what-happens-when
 maintainers.
 
+Contribution Guidelines
+-----------------------
+
+This project thrives on collaboration. If you notice any missing details or wish to expand upon existing explanations, we encourage you to contribute by sending a pull request. Your contributions will help create a more comprehensive resource for everyone.
+
+Getting Started
+---------------
+
+To contribute, follow these steps:
+
+1. Fork this repository.
+2. Make your changes or additions to the relevant sections.
+3. Ensure your contributions adhere to the project's formatting and style guidelines.
+4. Submit a pull request.
+
+License
+-------
+
+This project is licensed under the Creative Commons Zero license, allowing anyone to use, modify, and distribute the content without restrictions. By contributing to this repository, you agree to license your contributions under the same terms.
+
+Table of Contents
+-----------------
+
+The repository includes detailed explanations for various stages of the process:
+
+- The "g" key is pressed
+- The "enter" key bottoms out
+- Interrupt fires
+- Parse URL
+- Is it a URL or a search term?
+- Convert non-ASCII Unicode characters in the hostname
+- Check HSTS list
+- DNS lookup
+- ARP process
+- Opening of a socket
+- TLS handshake
+- If a packet is dropped
+- HTTP protocol
+- HTTP Server Request Handle
+- Behind the scenes of the Browser
+- HTML parsing
+- CSS interpretation
+- Page Rendering
+- GPU Rendering
+- Window Server
+- Post-rendering and user-induced execution
+
 Table of Contents
 ====================
 
@@ -709,3 +756,8 @@ page rendering and painting.
 .. _`downgrade attack`: http://en.wikipedia.org/wiki/SSL_stripping
 .. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
 .. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
+
+Contributing
+------------
+
+We welcome contributions from everyone. Whether you're a seasoned developer or just starting out, your insights and additions are invaluable to the community. Let's make this resource as comprehensive and accurate as possible together!
