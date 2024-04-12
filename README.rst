@@ -1,29 +1,41 @@
-What happens when...
-====================
+# What happens when you Type https://www.google.com?
+=====================================================
 
-This repository is an attempt to answer the age-old interview question "What
-happens when you type google.com into your browser's address box and press
-enter?"
-
-Except instead of the usual story, we're going to try to answer this question
-in as much detail as possible. No skipping out on anything.
-
-This is a collaborative process, so dig in and try to help out! There are tons
-of details missing, just waiting for you to add them! So send us a pull
-request, please!
-
-This is all licensed under the terms of the `Creative Commons Zero`_ license.
-
-Read this in `简体中文`_ (simplified Chinese), `日本語`_ (Japanese), `한국어`_
-(Korean) and `Spanish`_. NOTE: these have not been reviewed by the alex/what-happens-when
-maintainers.
+This repository contains information and diagrams esplaining the web stack workflow when you type a URL like https://www.google.com into your browser and press Enter.
 
 Table of Contents
 ====================
 
 .. contents::
-   :backlinks: none
-   :local:
+
+ - [Introduction]
+ - [Workflow Diagram]
+ - [Contibution]
+ - [License]
+
+
+Installation
+============
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/njeerix/what-happens-when.git
+cd what-happens-when
+# Additional installation steps if needed
+
+Usage
+=====
+
+To run the project, execute the following command:
+
+```bash
+# Command to run the project
+
+Workflow Diagram
+================
+
+My workflow Diagram: https://images2.imgbox.com/af/4c/7guuntnb_o.jpg
 
 The "g" key is pressed
 ----------------------
