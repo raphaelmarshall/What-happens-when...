@@ -619,6 +619,8 @@ set to "complete" and a "load" event is fired.
 Note there is never an "Invalid Syntax" error on an HTML page. Browsers fix
 any invalid content and go on.
 
+
+
 CSS interpretation
 ------------------
 
@@ -628,6 +630,14 @@ CSS interpretation
   contains CSS rules with selectors and objects corresponding CSS grammar.
 * A CSS parser can be top-down or bottom-up when a specific parser generator
   is used.
+
+CSS Preprocessing
+-----------------
+
+* Preprocess CSS files using tools like Sass, Less, or Stylus before parsing.
+* Use preprocessing features such as variables, mixins, and nested rules to write more maintainable and scalable CSS code.
+* Each preprocessed CSS file is compiled into standard CSS syntax before being parsed.
+* Preprocessing can help streamline development workflows and improve code organization.
 
 Page Rendering
 --------------
