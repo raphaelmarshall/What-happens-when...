@@ -666,13 +666,18 @@ Page Rendering
 GPU Rendering
 -------------
 
-* During the rendering process the graphical computing layers can use general
-  purpose ``CPU`` or the graphical processor ``GPU`` as well.
+Browser Rendering Pipeline
 
-* When using ``GPU`` for graphical rendering computations the graphical
-  software layers split the task into multiple pieces, so it can take advantage
-  of ``GPU`` massive parallelism for float point calculations required for
-  the rendering process.
+After the browser has received the HTML, CSS, and JavaScript files from the server, it must render the webpage for visual display. This rendering process follows a specific pipeline:
+
+Construction of the DOM (Document Object Model) Tree The HTML markup is parsed, and a DOM tree is constructed, representing the structure of the HTML document. This tree consists of nodes representing HTML elements, text nodes, and their relationships.
+Construction of the CSSOM (CSS Object Model) Tree The browser parses the CSS rules and constructs a CSSOM tree, which maps CSS rules to the corresponding DOM nodes.
+Render Tree Construction The DOM tree and CSSOM tree are combined to form the Render Tree, which represents the visual structure of the webpage. Only visible nodes are included in the Render Tree, as invisible nodes (e.g., elements with display: none) are omitted.
+Layout The browser calculates the position and dimensions of each node in the Render Tree, determining the overall layout of the webpage. This process considers factors like the size of the viewport, CSS properties (e.g., margin, padding, position), and the box model.
+Painting After the layout is determined, the browser paints the visible elements on the screen. This involves rasterizing text, processing images, and applying CSS styles like colors, backgrounds, and shadows.
+Compositing Modern browsers use a technique called compositing to improve the performance of rendering. Instead of painting the entire webpage as a single layer, different parts of the page are rendered into separate layers (e.g., text, images, video, canvas). These layers are then combined (composited) together to create the final rendered output.
+Continuous Rendering The rendering process is not a one-time event. Whenever the DOM, CSSOM, or JavaScript code changes, the browser re-renders the affected parts of the webpage, ensuring an up-to-date visual representation.
+This rendering pipeline is designed to be efficient and optimize performance. Techniques like incremental rendering, lazy rendering, and GPU acceleration are employed to provide a smooth and responsive user experience.
 
 
 Window Server
