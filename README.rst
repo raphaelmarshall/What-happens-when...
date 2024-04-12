@@ -209,21 +209,17 @@ Check HSTS list
 DNS lookup
 ----------
 
-* Browser checks if the domain is in its cache. (to see the DNS Cache in
-  Chrome, go to `chrome://net-internals/#dns <chrome://net-internals/#dns>`_).
-* If not found, the browser calls ``gethostbyname`` library function (varies by
-  OS) to do the lookup.
-* ``gethostbyname`` checks if the hostname can be resolved by reference in the
-  local ``hosts`` file (whose location `varies by OS`_) before trying to
-  resolve the hostname through DNS.
-* If ``gethostbyname`` does not have it cached nor can find it in the ``hosts``
-  file then it makes a request to the DNS server configured in the network
-  stack. This is typically the local router or the ISP's caching DNS server.
-* If the DNS server is on the same subnet the network library follows the
-  ``ARP process`` below for the DNS server.
-* If the DNS server is on a different subnet, the network library follows
-  the ``ARP process`` below for the default gateway IP.
-
+* The operating system, triggered by the browser's request, checks if the domain
+  is in its cache.
+* If not found in the cache, the OS initiates the lookup process using functions
+  like `gethostbyname` (function name may vary by OS).
+* `gethostbyname` first checks if the hostname can be resolved by reference in
+  the local host's file (location varies by OS) before attempting a DNS lookup.
+* If not found in the cache or `hosts` file, the OS makes a request to the
+  configured DNS server. This server can be the local router, ISP's caching server,
+  or any other user-defined DNS server.
+* The OS uses the ARP process to determine the DNS server's MAC address to find
+  its physical location on the network.
 
 ARP process
 -----------
