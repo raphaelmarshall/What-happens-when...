@@ -28,8 +28,6 @@ Table of Contents
 Key Terms:
 =============
 
-Sure, I'd be happy to explain these terms for you:
-
 1. **OS (Operating System):**
    An Operating System is software that manages the hardware and software resources of a computer. It provides services and an interface for the programs that run on the computer. Examples of operating systems include Windows, macOS, and Linux.
 
