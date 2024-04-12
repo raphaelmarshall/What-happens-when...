@@ -663,8 +663,10 @@ Page Rendering
   via Direct3D/OpenGL. The GPU command buffer(s) are flushed to the GPU for
   asynchronous rendering and the frame is sent to the window server.
 
+
 GPU Rendering
 -------------
+
 
 * During the rendering process the graphical computing layers can use general
   purpose ``CPU`` or the graphical processor ``GPU`` as well.
