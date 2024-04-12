@@ -25,6 +25,54 @@ Table of Contents
    :backlinks: none
    :local:
 
+Key Terms:
+=============
+
+Sure, I'd be happy to explain these terms for you:
+
+1. **OS (Operating System):**
+   An Operating System is software that manages the hardware and software resources of a computer. It provides services and an interface for the programs that run on the computer. Examples of operating systems include Windows, macOS, and Linux.
+
+2. **USB (Universal Serial Bus):**
+   USB is a standard for connecting devices to a computer. It supports data transfer and power supply to connected devices, such as keyboards, mice, storage devices, and other peripherals.
+
+3. **GUI (Graphical User Interface):**
+   A GUI is a type of user interface that allows users to interact with electronic devices using graphical elements such as windows, buttons, icons, and menus, rather than text-based commands.
+
+4. **API (Application Programming Interface):**
+   An API is a set of rules and protocols for building and interacting with software applications. It allows different software components to communicate with each other, facilitating integration and interoperability.
+
+5. **URL (Uniform Resource Locator):**
+   A URL is the address used to access resources on the internet, such as web pages, files, or other data. It typically includes the protocol (e.g., HTTP), domain name (e.g., example.com), and path to the resource.
+
+6. **HTTP (Hypertext Transfer Protocol):**
+   HTTP is the protocol used for transmitting data on the web. It is the foundation of any data exchange on the World Wide Web, allowing web browsers and servers to communicate.
+
+7. **HTTPS (Hypertext Transfer Protocol Secure):**
+   HTTPS is a secure version of HTTP that uses encryption (usually TLS) to protect data transmitted between the client (e.g., web browser) and the server. It ensures confidentiality and integrity of data.
+
+8. **TCP (Transmission Control Protocol):**
+   TCP is a connection-oriented protocol that ensures reliable, ordered, and error-checked delivery of data between applications running on devices connected to a network.
+
+9. **IP (Internet Protocol):**
+   IP is a set of rules governing the format and addressing of data sent over the internet. It is responsible for routing packets of data between devices on the network.
+
+10. **UDP (User Datagram Protocol):**
+    UDP is a connectionless protocol that allows data to be transmitted without establishing a connection first. It is faster but less reliable than TCP and is often used for streaming or real-time data transfer.
+
+11. **ARP (Address Resolution Protocol):**
+    ARP is a protocol used to map an IP address to its corresponding MAC address on a local network. This is essential for data packet delivery within a local area network (LAN).
+
+12. **MAC (Media Access Control) Address:**
+    A MAC address is a unique identifier assigned to a network interface controller (NIC) in a device. It is used for communication within a local network and is essential for data packet delivery.
+
+13. **TLS (Transport Layer Security):**
+    TLS is a protocol that provides secure communication over a computer network. It encrypts data being transferred and ensures data integrity, authenticity, and confidentiality.
+
+14. **ISP (Internet Service Provider):**
+    An ISP is a company that provides internet access to customers. ISPs may offer various types of internet connections, such as DSL, cable, fiber-optic, or satellite.
+
+
 The "g" key is pressed
 ----------------------
 The following sections explain the physical keyboard actions
