@@ -570,7 +570,35 @@ The components of the browsers are:
   need to save all sorts of data locally, such as cookies. Browsers also
   support storage mechanisms such as localStorage, IndexedDB, WebSQL and
   FileSystem.
+DNS Request:
 
+Your browser initiates a DNS (Domain Name System) request to translate the human-readable domain name "www.google.com" into an IP address.
+The DNS resolver looks up the IP address associated with "www.google.com" and returns it to your browser.
+TCP/IP:
+
+With the IP address obtained, your browser establishes a TCP (Transmission Control Protocol) connection to the server hosting Google's website.
+TCP ensures reliable and ordered delivery of data packets over the Internet by creating a connection-oriented communication channel.
+Firewall:
+
+The connection might pass through a firewall, a security measure that monitors and controls incoming and outgoing network traffic, ensuring it complies with predetermined security rules.
+HTTPS/SSL:
+
+Once the connection is established, your browser and the server engage in a handshake to negotiate a secure communication channel using HTTPS (HTTP over SSL or TLS).
+This encryption layer ensures that the data exchanged between your browser and Google's servers remains confidential and integral.
+Load-Balancer:
+
+If Google employs load-balancing mechanisms, your request may be directed to one of several web servers based on factors like server load or geographic proximity.
+Web Server:
+
+The selected web server receives the HTTPS request and retrieves the requested webpage (in this case, the Google homepage) from its storage.
+The server dynamically generates the HTML content, incorporating any personalized elements or search results, before sending it back to your browser.
+Application Server:
+
+In more complex web applications, the web server may communicate with an application server where the actual processing of dynamic content takes place.
+For Google, this could involve executing complex algorithms to provide search results tailored to your query.
+Database:
+
+Behind the scenes, databases play a crucial role in storing and retrieving vast amounts of data. This could involve indexing the web's vast expanse or storing user preferences, contributing to the browsing experience.
 HTML parsing
 ------------
 
