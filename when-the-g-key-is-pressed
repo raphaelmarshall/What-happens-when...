@@ -1,0 +1,3 @@
+When you press the g-key, it depends on the context in which it is pressed. If you are on a webpage or in a search bar, pressing the g-key might initiate a search using Google as the default search engine. However, if you are in a specific application or context, the behavior of the g-key might be different.
+
+If you are in a browser and press the g-key while the cursor is in the address bar, it might initiate a search using Google as the default search engine. In this case, the browser sends an HTTP request to the Google server with the search query as a parameter. Google then processes the request, performs the search, and returns the search results to the browser. The browser then displays the search results to the user.
