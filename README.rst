@@ -369,34 +369,44 @@ This send and receive happens multiple times following the TCP connection flow:
 
 TLS handshake
 -------------
-* The client computer sends a ``ClientHello`` message to the server with its
-  Transport Layer Security (TLS) version, list of cipher algorithms and
-  compression methods available.
+The Transport Layer Security (TLS) handshake is the process by which a client and a server establish a secure encrypted connection. Here are the steps involved in a successful TLS handshake:
 
-* The server replies with a ``ServerHello`` message to the client with the
-  TLS version, selected cipher, selected compression methods and the server's
-  public certificate signed by a CA (Certificate Authority). The certificate
-  contains a public key that will be used by the client to encrypt the rest of
-  the handshake until a symmetric key can be agreed upon.
+1. Client Hello: The client initiates the handshake by sending a "ClientHello" message to the server. This message includes:
 
-* The client verifies the server digital certificate against its list of
-  trusted CAs. If trust can be established based on the CA, the client
-  generates a string of pseudo-random bytes and encrypts this with the server's
-  public key. These random bytes can be used to determine the symmetric key.
+*   The TLS version the client supports.
+*   A list of cipher suites (encryption algorithms) and compression methods supported by the client.
+*   A random value (Client Random) and any session ID if resuming a previous session.
 
-* The server decrypts the random bytes using its private key and uses these
-  bytes to generate its own copy of the symmetric master key.
+2. Server Hello: Upon receiving the ClientHello message, the server responds with a "ServerHello" message, which includes:
 
-* The client sends a ``Finished`` message to the server, encrypting a hash of
-  the transmission up to this point with the symmetric key.
+*   The TLS version chosen for the connection.
+*   The chosen cipher suite from the list provided by the client.
+*   A random value (Server Random).
+Optionally, the server may request a client certificate or indicate that it will not require one.
 
-* The server generates its own hash, and then decrypts the client-sent hash
-  to verify that it matches. If it does, it sends its own ``Finished`` message
-  to the client, also encrypted with the symmetric key.
+3. Server Certificate: The server sends its digital certificate to the client, which includes:
 
-* From now on the TLS session transmits the application (HTTP) data encrypted
-  with the agreed symmetric key.
+*   The server's public key.
+*   Information about the server, such as its domain name.
+*   The digital signature of the certificate authority (CA) that issued the certificate.
 
+4. Server Key Exchange (optional): In some cases, the server may send additional data to allow the client to generate the premaster secret, which is used to derive session keys. This step depends on the chosen cipher suite and whether the server's key exchange method requires it.
+
+5. Server Hello Done: The server sends a "ServerHelloDone" message to indicate that it has completed its part of the handshake.
+
+6. Client Certificate (optional): If the server requested a client certificate, the client sends its digital certificate to the server.
+
+7. Client Key Exchange: The client generates the premaster secret, encrypts it with the server's public key obtained from the server certificate, and sends it to the server.
+
+8. Change Cipher Spec: The client sends a "ChangeCipherSpec" message to indicate that it will start encrypting data with the negotiated parameters.
+
+9. Finished: The client sends a "Finished" message, which is a hash of all previous handshake messages sent in both directions, encrypted with the negotiated encryption parameters.
+
+10. Change Cipher Spec (Server): The server receives the "ChangeCipherSpec" message from the client and transitions to encrypted communication.
+
+11. Finished (Server): The server sends its "Finished" message, which is a hash of all previous handshake messages, encrypted with the negotiated encryption parameters.
+
+12. Established Secure Connection: Both client and server have now completed the handshake. They can exchange encrypted application data over the secure connection using the negotiated encryption parameters.
 If a packet is dropped
 ----------------------
 
