@@ -514,18 +514,18 @@ HTTP Vulnerabilities and Weaknesses
 ------------------------------------
 Websites that uses HTTP protocol are dangrous because the data is not encrypted,
 they are just represented in plain-text as the below example of HTTP response shows.
-_______________
+
+```
 HTTP/1.1 200 OK
 Date: Wed, 30 Jan 2024 12:14:39 GMT
 Server: Apache
-Last-Modified: Mon, 28 Jan 2024 11:17:01 GMT
-Accept-Ranges: bytes
 Content-Length: 12
 Vary: Accept-Encoding
 Content-Type: text/plain
 
 Hello World!
-_______________
+```
+
 So you should pay attention to it.
 the following are common techniques and attacks that could infect HTTP websites.
 
