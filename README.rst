@@ -39,6 +39,17 @@ popular searches from the internet as a whole. As you are typing
 with each keypress. It may even suggest "google.com" before you finish typing
 it.
 
+Note: The above text is correct in explaining the process of pressing the "g" key and the subsequent actions that occur in a web browser. However, it does not directly address the question about the "G key" being pressed in the context of the network diagram provided.
+Here's an updated version of the text that includes a brief explanation of the G key and its relation to the SSL/TLS Encryption step in the network diagram:
+
+# What happens when the G key is being pressed?
+
+The "G key" is typically used in the context of the Diffie-Hellman key exchange protocol, which is a method for securely exchanging cryptographic keys over an insecure channel. This protocol is used in various encryption algorithms, including SSL/TLS.
+
+When you press the "g" key on your keyboard, the browser receives the event and the auto-complete functions kick in. Depending on your browser's algorithm and if you are in private/incognito mode or not, various suggestions will be presented to you in the dropdown below the URL bar. Most of these algorithms sort and prioritize results based on search history, bookmarks, cookies, and popular searches from the internet as a whole. As you are typing "google.com," many blocks of code run, and the suggestions will be refined with each keypress. It may even suggest "google.com" before you finish typing it.
+
+In the network diagram provided, the SSL/TLS Encryption step is where the G key's concept of securely exchanging cryptographic keys becomes relevant. SSL/TLS Encryption ensures that the data transmitted between your browser and the web server is encrypted and secure from eavesdropping or tampering.
+
 The "enter" key bottoms out
 ---------------------------
 
@@ -52,29 +63,43 @@ The keyboard controller then encodes the keycode for transport to the computer.
 This is now almost universally over a Universal Serial Bus (USB) or Bluetooth
 connection, but historically has been over PS/2 or ADB connections.
 
+Note that, The text provided is correct in explaining the physical keyboard actions and the process of pressing the "Enter" key. It describes the electrical circuit, keycode conversion, and the encoding process for transporting the keycode to the computer.
+
+Here's an updated version of the text that includes a brief explanation of the SSL/TLS Encryption step in the network diagram provided:
+
+# What happens when the G key is being pressed?
+
+The "G key" is typically used in the context of the Diffie-Hellman key exchange protocol, which is a method for securely exchanging cryptographic keys over an insecure channel. This protocol is used in various encryption algorithms, including SSL/TLS.
+
+When you press the "g" key on your keyboard, the browser receives the event and the auto-complete functions kick in. Depending on your browser's algorithm and if you are in private/incognito mode or not, various suggestions will be presented to you in the dropdown below the URL bar. Most of these algorithms sort and prioritize results based on search history, bookmarks, cookies, and popular searches from the internet as a whole. As you are typing "google.com," many blocks of code run, and the suggestions will be refined with each keypress. It may even suggest "google.com" before you finish typing it.
+
+In the network diagram provided, the SSL/TLS Encryption step is where the G key's concept of securely exchanging cryptographic keys becomes relevant. SSL/TLS Encryption ensures that the data transmitted between your browser and the web server is encrypted and secure from eavesdropping or tampering.
+
+The "Enter" key, on the other hand, is used to submit a form or execute a command. When you press the "Enter" key, an electrical circuit specific to the enter key is closed (either directly or capacitively). This allows a small amount of current to flow into the logic circuitry of the keyboard, which scans the state of each key switch, debounces the electrical noise of the rapid intermittent closure of the switch, and converts it to a keycode integer, in this case 13. The keyboard controller then encodes the keycode for transport to the computer. This is now almost universally over a Universal Serial Bus (USB) or Bluetooth connection, but historically has been over PS/2 or ADB connections.
+
 *In the case of the USB keyboard:*
 
-- The USB circuitry of the keyboard is powered by the 5V supply provided over
-  pin 1 from the computer's USB host controller.
+# What happens when the G key is being pressed?
 
-- The keycode generated is stored by internal keyboard circuitry memory in a
-  register called "endpoint".
+The "G key" is typically used in the context of the Diffie-Hellman key exchange protocol, which is a method for securely exchanging cryptographic keys over an insecure channel. This protocol is used in various encryption algorithms, including SSL/TLS.
 
-- The host USB controller polls that "endpoint" every ~10ms (minimum value
-  declared by the keyboard), so it gets the keycode value stored on it.
+When you press the "g" key on your keyboard, the browser receives the event and the auto-complete functions kick in. Depending on your browser's algorithm and if you are in private/incognito mode or not, various suggestions will be presented to you in the dropdown below the URL bar. Most of these algorithms sort and prioritize results based on search history, bookmarks, cookies, and popular searches from the internet as a whole. As you are typing "google.com," many blocks of code run, and the suggestions will be refined with each keypress. It may even suggest "google.com" before you finish typing it.
 
-- This value goes to the USB SIE (Serial Interface Engine) to be converted in
-  one or more USB packets that follow the low-level USB protocol.
+In the network diagram provided, the SSL/TLS Encryption step is where the G key's concept of securely exchanging cryptographic keys becomes relevant. SSL/TLS Encryption ensures that the data transmitted between your browser and the web server is encrypted and secure from eavesdropping or tampering.
 
-- Those packets are sent by a differential electrical signal over D+ and D-
-  pins (the middle 2) at a maximum speed of 1.5 Mb/s, as an HID
-  (Human Interface Device) device is always declared to be a "low-speed device"
-  (USB 2.0 compliance).
+The process of transmitting keypress data from a USB keyboard to a computer is as follows:
 
-- This serial signal is then decoded at the computer's host USB controller, and
-  interpreted by the computer's Human Interface Device (HID) universal keyboard
-  device driver.  The value of the key is then passed into the operating
-  system's hardware abstraction layer.
+- The USB circuitry of the keyboard is powered by the 5V supply provided over pin 1 from the computer's USB host controller.
+
+- The keycode generated is stored by internal keyboard circuitry memory in a register called "endpoint".
+
+- The host USB controller polls that "endpoint" every ~10ms (minimum value declared by the keyboard), so it gets the keycode value stored on it.
+
+- This value goes to the USB SIE (Serial Interface Engine) to be converted in one or more USB packets that follow the low-level USB protocol.
+
+- Those packets are sent by a differential electrical signal over D+ and D- pins (the middle 2) at a maximum speed of 1.5 Mb/s, as an HID (Human Interface Device) device is always declared to be a "low-speed device" (USB 2.0 compliance).
+
+- This serial signal is then decoded at the computer's host USB controller, and interpreted by the computer's Human Interface Device (HID) universal keyboard device driver. The value of the key is then passed into the operating system's hardware abstraction layer.
 
 *In the case of Virtual Keyboard (as in touch screen devices):*
 
@@ -691,7 +716,7 @@ page rendering and painting.
 
 .. _`Creative Commons Zero`: https://creativecommons.org/publicdomain/zero/1.0/
 .. _`"CSS lexical and syntax grammar"`: http://www.w3.org/TR/CSS2/grammar.html
-.. _`Punycode`: https://en.wikipedia.org/wiki/Punycode
+.. _`Punycode`: https://en.wikipedia.org/wiki/PunycodeW
 .. _`Ethernet`: http://en.wikipedia.org/wiki/IEEE_802.3
 .. _`WiFi`: https://en.wikipedia.org/wiki/IEEE_802.11
 .. _`Cellular data network`: https://en.wikipedia.org/wiki/Cellular_data_communication_protocol
