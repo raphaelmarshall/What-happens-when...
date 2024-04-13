@@ -224,7 +224,23 @@ DNS lookup
 * If the DNS server is on a different subnet, the network library follows
   the ``ARP process`` below for the default gateway IP.
 
+DNS Lookup Process
+Browser Cache Check:
 
+When you type a URL into your browser, the first place the browser checks for the corresponding IP address is its own DNS cache. This cache stores IP addresses of recently visited websites to speed up future accesses.
+In Google Chrome, you can view this cache by navigating to chrome://net-internals/#dns.
+Operating System Cache Check:
+
+If the browser cache does not have the data, the next step involves the operating system's DNS resolution capabilities. The function gethostbyname (or its modern replacement getaddrinfo on newer systems) is invoked.
+This function first checks the system's DNS cache (separate from the browser’s DNS cache) for the requested domain.
+Hosts File Check:
+
+If the domain is still unresolved, gethostbyname looks up the local hosts file. This is a simple text file that maps hostnames to IP addresses, allowing for manual DNS entries which can be useful for testing or network administration.
+The location of the hosts file varies by OS: e.g., /etc/hosts on Unix/Linux/macOS and C:\Windows\System32\drivers\etc\hosts on Windows.
+DNS Server Request:
+
+If the hosts file does not contain the needed information, a DNS query is sent out to the DNS server specified in the network settings of the device. This server is often provided by the ISP or could be a custom setting like Google’s DNS (8.8.8.8) or Cloudflare’s DNS (1.1.1.1).
+The initial DNS server contacted is typically a caching DNS server, which will check its cache and, if needed, perform recursive queries to other DNS servers on the internet to resolve the domain name.
 ARP process
 -----------
 
