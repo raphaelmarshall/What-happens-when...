@@ -293,9 +293,20 @@ the default gateway it can resume its DNS process:
 * The DNS client establishes a socket to UDP port 53 on the DNS server,
   using a source port above 1023.
 * If the response size is too large, TCP will be used instead.
-* If the local/ISP DNS server does not have it, then a recursive search is
+* If the local/ISP DNS server does not have it, then a *recursive search* is
   requested and that flows up the list of DNS servers until the SOA is reached,
   and if found an answer is returned.
+
+Recursive search
+-----------------
+recursive DNS lookup process:
+
+1. *Local/ISP DNS Server*: The process begins when your device asks its local DNS server (often provided by your ISP) for the IP address associated with a domain name.
+2. *Root Servers*: If the local DNS server doesn't have the record cached, it queries the root servers. The root servers don't know the IP address but can direct the resolver to the TLD servers for the domain's extension (.COM, .KE, .ORG, etc.).
+3. *TLD Servers*: The TLD servers manage the information for their specific domain extensions and can provide the address of the authoritative name servers for the domain being queried.
+4. *Authoritative Name Servers*: These servers have the actual DNS record with the IP address for the domain name. If the TLD servers don't have the record, the resolver is directed here.
+5. *IP Address Retrieved*: Once the authoritative name server provides the IP address, the resolver sends this information back to the local DNS server, which caches it for future queries and relays it to your device.
+6. *Browser Requests Resource*: Your browser can now use the IP address to request the desired resources from the web servers hosting the content you wish to access.
 
 Opening of a socket
 -------------------
