@@ -510,6 +510,69 @@ and IIS for Windows.
   is running on PHP, the server uses PHP to interpret the index file, and
   streams the output to the client.
 
+HTTP Vulnerabilities and Weaknesses
+------------------------------------
+Websites that uses HTTP protocol are dangrous because the data is not encrypted,
+they are just represented in plain-text as the below example of HTTP response shows.
+_______________
+HTTP/1.1 200 OK
+Date: Wed, 30 Jan 2024 12:14:39 GMT
+Server: Apache
+Last-Modified: Mon, 28 Jan 2024 11:17:01 GMT
+Accept-Ranges: bytes
+Content-Length: 12
+Vary: Accept-Encoding
+Content-Type: text/plain
+
+Hello World!
+_______________
+So you should pay attention to it.
+the following are common techniques and attacks that could infect HTTP websites.
+
+Plain-Text Transmission: HTTP sends data in plain text,
+making it easy for attackers to intercept and view sensitive information,
+such as login credentials, personal data, and financial details. Without encryption,
+data confidentiality and integrity are compromised.
+
+Man-in-the-Middle (MITM) Attacks: Attackers can intercept communication between
+the client and server by positioning themselves between the two parties.
+This allows them to eavesdrop on the exchange of information,
+modify data packets, or inject malicious content into the communication stream.
+
+Session Hijacking: Without encryption, session tokens and cookies used for
+session management can be captured by attackers. This enables them to hijack user sessions,
+impersonate legitimate users, and gain unauthorized access to sensitive accounts and data.
+
+Content Modification: Attackers can alter the content of HTTP responses in transit,
+injecting malicious scripts, malware, or phishing pages into web pages served over HTTP.
+Users may unknowingly download or execute malicious content,
+leading to compromise of their devices or sensitive information.
+
+Traffic Analysis: Even if the content of HTTP requests and responses is not directly readable,
+attackers can still analyze traffic patterns to gather valuable information,
+such as user behavior, website structure, or application logic.
+This information can be used for reconnaissance or to identify vulnerabilities in the website.
+
+On-Path Attacks: In on-path attacks, 
+attackers position themselves along the communication path between the client and server,
+allowing them to intercept, modify, or block traffic passing through their location.
+This can be achieved through techniques such as ARP spoofing or Wi-Fi packet sniffing.
+
+DNS Hijacking: Attackers can compromise DNS (Domain Name System) servers to redirect users to 
+malicious websites or intercept their communication with legitimate websites. By manipulating DNS resolution,
+attackers can control the destination IP addresses associated with domain names.
+
+BGP Hijacking: BGP (Border Gateway Protocol) hijacking involves 
+maliciously announcing IP address prefixes to route traffic through unauthorized networks.
+Attackers can intercept and manipulate traffic destined for specific IP addresses,
+enabling them to perform various attacks, including traffic interception and denial-of-service.
+
+Domain Spoofing: Domain spoofing involves creating deceptive domain names that resemble legitimate ones,
+with the intent to deceive users or bypass security mechanisms.
+Attackers may register domains similar to well-known websites to 
+trick users into disclosing sensitive information or installing malware.
+
+
 Behind the scenes of the Browser
 ----------------------------------
 
