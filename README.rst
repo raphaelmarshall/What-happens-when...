@@ -178,7 +178,7 @@ Parse URL
 Is it a URL or a search term?
 -----------------------------
 
-When no protocol or valid domain name is given the browser proceeds to feed
+When no protocol or valid domain name is given, the browser proceeds to feed
 the text given in the address box to the browser's default web search engine.
 In many cases the URL has a special piece of text appended to it to tell the
 search engine that it came from a particular browser's URL bar.
@@ -218,7 +218,7 @@ DNS lookup
   resolve the hostname through DNS.
 * If ``gethostbyname`` does not have it cached nor can find it in the ``hosts``
   file then it makes a request to the DNS server configured in the network
-  stack. This is typically the local router or the ISP's caching DNS server.
+  stack. This is typically the local router or the Internet Service Provider (ISP)'s caching DNS server.
 * If the DNS server is on the same subnet the network library follows the
   ``ARP process`` below for the DNS server.
 * If the DNS server is on a different subnet, the network library follows
@@ -503,8 +503,8 @@ and IIS for Windows.
   URL Rewrite for IIS), it tries to match the request against one of the
   configured rules. If a matching rule is found, the server uses that rule to
   rewrite the request.
-* The server goes to pull the content that corresponds with the request,
-  in our case it will fall back to the index file, as "/" is the main file
+* The server goes to pull the content (which usually contains both static and dynamic) that corresponds with the request,
+  in our case it will fall back to the main index file, as "/" is a call to the main file.
   (some cases can override this, but this is the most common method).
 * The server parses the file according to the handler. If Google
   is running on PHP, the server uses PHP to interpret the index file, and
