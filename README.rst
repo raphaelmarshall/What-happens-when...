@@ -678,6 +678,11 @@ GPU Rendering
 Window Server
 -------------
 
+WEB SERVER
+-------------
+
+Once the request reaches Google’s web server, it’s processed by specialized software designed to handle HTTP requests and serve web content. The web server retrieves the requested webpage or resource from storage, generates dynamic content if necessary, and prepares an HTTP response to send back to the client.
+
 Post-rendering and user-induced execution
 -----------------------------------------
 
