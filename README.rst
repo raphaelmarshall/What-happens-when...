@@ -1,5 +1,29 @@
 What happens when...
 ====================
+#Key Press Handling for "g" Key:
+When the "g" key is pressed, an electrical circuit specific to the
+"g" key is closed, allowing a small amount of current to flow into the 
+logic circuitry of the keyboard.
+
+The keyboard's logic circuitry scans the state of each key switch, debounces the electrical
+noise, and converts the "g" key press into a keycode integer, which is typically 103
+(assuming ASCII or Unicode encoding).
+
+The keycode generated is stored in the internal keyboard circuitry memory.
+
+The keycode value is encoded into one or more USB packets following the USB protocol.
+The packets are transmitted over D+ and D- pins as a low-speed USB device signal (1.5 Mb/s).
+
+The host USB controller decodes the USB packets and interprets the keycode value.
+The interpreted keycode is passed to the computer's Human Interface Device (HID)
+universal keyboard device driver.
+
+The HID driver passes the key event to the operating system's hardware abstraction layer.
+The operating system, based on its architecture and device driver implementation:
+On Windows: Generates a WM_KEYDOWN message for the active application.
+On OS X: Triggers a KeyDown NSEvent.
+On GNU/Linux: Relies on the Xorg server to handle the keypress and send it to the focused
+window.
 
 This repository is an attempt to answer the age-old interview question "What
 happens when you type google.com into your browser's address box and press
