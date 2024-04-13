@@ -666,6 +666,10 @@ Page Rendering
 GPU Rendering
 -------------
 
+* The entire webpage is rendered on the screen by switching each individual 
+  pixel on the computer to the color it was originally designed as or its 
+  closest available in the case of older computer.
+
 * During the rendering process the graphical computing layers can use general
   purpose ``CPU`` or the graphical processor ``GPU`` as well.
 
