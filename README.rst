@@ -674,6 +674,8 @@ GPU Rendering
   of ``GPU`` massive parallelism for float point calculations required for
   the rendering process.
 
+  This not only optimizes performance but also takes advantage of the GPU's specialized compute units and high memory bandwidth for efficient real-time rendering via graphics APIs.
+
 
 Window Server
 -------------
