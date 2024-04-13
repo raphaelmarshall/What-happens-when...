@@ -628,6 +628,10 @@ CSS interpretation
   contains CSS rules with selectors and objects corresponding CSS grammar.
 * A CSS parser can be top-down or bottom-up when a specific parser generator
   is used.
+* The parsed CSS rules are then matched with the DOM elements based on their selectors to determine the applicable styles.
+* Cascading and specificity rules are applied to resolve conflicts between different CSS rules targeting the same element.
+* Once the applicable styles are determined for each element, they are computed to generate a computed style for each element.
+* The computed styles are then used in conjunction with the layout information to determine the final visual representation of the page.
 
 Page Rendering
 --------------
