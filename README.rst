@@ -709,3 +709,20 @@ page rendering and painting.
 .. _`downgrade attack`: http://en.wikipedia.org/wiki/SSL_stripping
 .. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
 .. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
+
+Load Balancer
+-------------
+The load balancer acts like a traffic director, receiving your encrypted request
+aimed at the generic Google IP address.
+
+Distribution Strategy: The load balancer uses a specific algorithm to decide which
+Google server is best suited to handle your request.
+Here are some common strategies:
+* Round Robin: Requests are distributed evenly across available servers, ensuring fair utilization.
+* Least Connections: The server with the fewest current connections receives the request, optimizing
+response times.
+* Health Checks: The load balancer constantly monitors the health of backend servers.
+If a server becomes overloaded or unresponsive, it's temporarily removed from the pool
+to avoid impacting performance.
+* Request Routed: Based on the chosen strategy, the load balancer directs your encrypted
+request to a specific Google web server.
