@@ -709,3 +709,33 @@ page rendering and painting.
 .. _`downgrade attack`: http://en.wikipedia.org/wiki/SSL_stripping
 .. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
 .. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
+
+Title: The Journey of a URL: What Happens Behind the Scenes
+
+Ever wondered what goes on behind the scenes when you type "https://www.google.com" into your browser and hit Enter? Let's demystify this process step by step:
+
+**1. DNS Request:**
+Your browser initiates a DNS lookup to translate the domain name "www.google.com" into an IP address.
+
+**2. TCP/IP:**
+Your browser establishes a TCP connection to the server using its IP address, ensuring reliable data transfer.
+
+**3. Firewall:**
+Your request may pass through a firewall, a security barrier that monitors and controls network traffic.
+
+**4. HTTPS/SSL:**
+If the website uses HTTPS, your browser and the server negotiate a secure connection using SSL/TLS protocols.
+
+**5. Load-Balancer:**
+For large websites like Google, a load balancer distributes incoming traffic across multiple servers for optimal performance.
+
+**6. Web Server:**
+The web server processes your request and retrieves the requested web page or resource.
+
+**7. Application Server:**
+For dynamic websites, the web server may interact with an application server to process user requests.
+
+**8. Database:**
+If needed, the web server fetches data from a database, such as search results on Google.
+
+In summary, typing "https://www.google.com" triggers DNS resolution, TCP/IP communication, HTTPS/SSL security, load balancing, web server processing, potential application server interaction, and database queries. It's a complex yet seamless orchestration of technologies delivering the web content we rely on daily.
