@@ -480,6 +480,12 @@ resolving the other domain, and follows all steps up to this point for that
 domain. The ``Host`` header in the request will be set to the appropriate
 server name instead of ``google.com``.
 
+Load Balancing
+----------------------------------
+
+The load balancer distribute incoming traffic across multiple servers, ensuring optimal performance and reliability. 
+The load balancer directs your request to an available web server using the load balancing algorithm stated.
+
 HTTP Server Request Handle
 --------------------------
 The HTTPD (HTTP Daemon) server is the one handling the requests/responses on
