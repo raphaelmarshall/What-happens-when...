@@ -689,6 +689,21 @@ the Google homepage. Scripts can cause additional network requests to be
 performed, as well as modify the page or its layout, causing another round of
 page rendering and painting.
 
+
+
+Load Balancer
+-------------------
+
+
+To ensure uninterrupted service for our website, it's important to have a plan in place in case of server downtime or heavy traffic. This means implementing redundancy and load-balancing techniques to divide the workload among multiple servers based on user demand and computational needs. By using a load balancer, traffic can be efficiently directed to healthy servers and ensure that users have a seamless experience. Additionally, we can use a failover mechanism by implementing two load balancers, with one active and the other on standby in case of emergencies. In the event of an outage, we can easily switch to the secondary load balancer by managing the DNS record to return the IP address of the backup server.
+
+> There are two types of load balancers, layer4 load balancing, and layer 7 load balancing:
+
+-   Layer 4 Load Balancing: This operates at the transport layer of the OSI model. It directs traffic based on data from network and transport layer protocols such as TCP and UDP. It’s quick and efficient because it does not take data into account. However, it cannot perform smart load balancing based on the content.
+-   Layer 7 Load Balancing: This operates at the application layer of the OSI model. It adds request routing decisions based on attributes, such as the HTTP header and the uniform resource identifier URI. It’s more complex and can make routing decisions based on the content of the data, so we can host domains in the same IP address, such as  [blog.domain.com](http://blog.domain.com/)  and  [www.domain.com](http://www.domain.com/). The load balancer looks at the header and routes the packets to the correct server that can handle the request. However, its load balancing is more CPU‑intensive than packet‑based Layer 4 load balancing.
+
+Google operates millions of web servers, and when a user requests the IP address for  [google.com](http://google.com/), the DNS system responds with an IP address for a Google load balancer rather than a specific server. This load balancer then distributes incoming traffic across numerous backend servers, ensuring optimal request processing.
+
 .. _`Creative Commons Zero`: https://creativecommons.org/publicdomain/zero/1.0/
 .. _`"CSS lexical and syntax grammar"`: http://www.w3.org/TR/CSS2/grammar.html
 .. _`Punycode`: https://en.wikipedia.org/wiki/Punycode
