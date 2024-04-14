@@ -709,3 +709,39 @@ page rendering and painting.
 .. _`downgrade attack`: http://en.wikipedia.org/wiki/SSL_stripping
 .. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
 .. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
+
+Certainly! Here's a README.md style explanation of how the TLS handshake works:
+
+```markdown
+# How TLS Handshake Works
+
+The TLS (Transport Layer Security) handshake is a crucial process for establishing a secure connection between your browser and a website. This guide provides an overview of each step involved in the TLS handshake:
+
+## 1. Client Hello
+- The client (your browser) initiates the handshake by sending a "Client Hello" message to the server (the website you're connecting to).
+- This message contains information such as the TLS version supported by the client, a list of cipher suites (encryption algorithms) it supports, and a random value used for generating session keys.
+
+## 2. Server Hello
+- Upon receiving the Client Hello message, the server responds with a "Server Hello" message.
+- This message includes the TLS version selected for the connection, the chosen cipher suite from the client's list, and its own random value.
+
+## 3. Server Certificate
+- The server sends its digital certificate to the client, containing its public key and other identifying information.
+- The client verifies the certificate's authenticity, ensuring it was issued by a trusted Certificate Authority (CA) and has not been tampered with.
+
+## 4. Key Exchange
+- The client generates a pre-master secret and encrypts it using the server's public key obtained from the certificate.
+- This encrypted pre-master secret is sent to the server. Both parties independently derive the master secret from the pre-master secret and their respective random values.
+
+## 5. Session Keys
+- Using the master secret, both the client and server derive session keys for encrypting and decrypting data exchanged during the TLS session.
+- These session keys are unique to the connection and are discarded after the session ends, providing forward secrecy.
+
+## 6. Finished
+- Both the client and server exchange "Finished" messages to confirm that the handshake is complete and that both parties have successfully derived the same session keys.
+- From this point onward, all data exchanged between the client and server is encrypted using these session keys.
+
+The TLS handshake ensures that your communication with websites is encrypted, protecting sensitive information from eavesdroppers and attackers. By establishing a secure connection, TLS helps maintain privacy and integrity online.
+```
+
+This markdown-style README.md provides a clear and structured explanation of the TLS handshake process.
