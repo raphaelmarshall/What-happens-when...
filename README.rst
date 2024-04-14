@@ -674,6 +674,30 @@ GPU Rendering
   of ``GPU`` massive parallelism for float point calculations required for
   the rendering process.
 
+* ``GPU``s are optimized for highly parallel workloads, such as the
+  math-intensive operations involved in 3D rendering. They contain hundreds or
+  even thousands of smaller processing cores, known as CUDA cores or stream
+  processors, that can simultaneously execute multiple rendering calculations
+  in parallel. This massively parallel architecture enables ``GPU``s to
+  significantly outperform CPUs for graphics-intensive tasks.
+
+* The rendering pipeline is divided into various stages, such as vertex
+  processing, rasterization, and fragment (pixel) processing. By offloading
+  these computationally intensive stages to the ``GPU``, the rendering process
+  can be accelerated compared to relying solely on the ``CPU``. The ``GPU``'s
+  specialized hardware and architecture make it well-suited for the repetitive,
+  data-parallel operations required in 3D rendering.
+
+* Modern graphics APIs, such as DirectX, Vulkan, and OpenGL, provide the
+  necessary abstractions and tools for developers to leverage the ``GPU``'s
+  capabilities effectively for rendering. These APIs handle the low-level
+  communication and synchronization between the ``CPU`` and ``GPU``, allowing
+  developers to focus on the high-level rendering logic.
+
+* In summary, ``GPU`` rendering leverages the massively parallel processing power
+  of the graphical processing unit to accelerate the computationally intensive tasks
+  involved in the 3D rendering process, resulting in improved performance and visual
+  quality compared to ``CPU``-only rendering.
 
 Window Server
 -------------
