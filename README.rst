@@ -297,6 +297,14 @@ the default gateway it can resume its DNS process:
   requested and that flows up the list of DNS servers until the SOA is reached,
   and if found an answer is returned.
 
+DNS caching
+-----------
+After the DNS lookup process, browsers often cache DNS records locally to expedite future domain name resolutions. This caching mechanism helps reduce latency and improve browsing performance by eliminating the need to repeatedly query DNS servers for frequently accessed domain names.
+When a browser resolves a domain name for the first time, it queries the DNS server to obtain the corresponding IP address. Upon receiving the response, the browser stores this mapping in its local DNS cache along with a time-to-live (TTL) value. The TTL specifies how long the DNS record should be considered valid before it expires and needs to be refreshed.
+Subsequent requests to the same domain within the TTL period are resolved using the cached DNS record, bypassing the need for another round of DNS lookup. This results in faster domain resolution times and a smoother browsing experience for the user.
+However, it's important to note that DNS caching is subject to TTL values set by DNS servers and can vary depending on network configurations. Additionally, DNS caching may introduce potential issues such as stale DNS records if changes occur at the authoritative DNS server before the TTL expiry.
+Overall, DNS caching plays a crucial role in optimizing web browsing performance by reducing DNS lookup times and improving overall responsiveness.
+
 Opening of a socket
 -------------------
 Once the browser receives the IP address of the destination server, it takes
