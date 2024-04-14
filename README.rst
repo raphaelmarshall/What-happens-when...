@@ -213,6 +213,10 @@ DNS lookup
   Chrome, go to `chrome://net-internals/#dns <chrome://net-internals/#dns>`_).
 * If not found, the browser calls ``gethostbyname`` library function (varies by
   OS) to do the lookup.
+* Before a request is sent after typing the url in the search bar and enter is clicked,
+  the computer converts that human-friendly domain name into an IP address
+  (the language of computers) that the network can understand.
+Your computer sends a DNS query to a DNS server, asking for the IP address associated with
 * ``gethostbyname`` checks if the hostname can be resolved by reference in the
   local ``hosts`` file (whose location `varies by OS`_) before trying to
   resolve the hostname through DNS.
