@@ -674,6 +674,8 @@ GPU Rendering
   of ``GPU`` massive parallelism for float point calculations required for
   the rendering process.
 
+* Upon pressing the "g" key, GPU rendering triggers the graphical processing unit (GPU) to render visual elements on the screen, enhancing responsiveness and performance in graphics-intensive tasks. This process offloads computational tasks from the CPU, allowing for smoother animation, faster image processing, and immersive gaming experiences.
+
 
 Window Server
 -------------
