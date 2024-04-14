@@ -516,7 +516,9 @@ Behind the scenes of the Browser
 Once the server supplies the resources (HTML, CSS, JS, images, etc.)
 to the browser it undergoes the below process:
 
-* Parsing - HTML, CSS, JS
+* Parsing: There's two type of parsing:
+1. conventional parsing for CSS and JS.
+2. unconventional parsing for HTML.
 * Rendering - Construct DOM Tree → Render Tree → Layout of Render Tree →
   Painting the render tree
 
