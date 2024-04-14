@@ -709,3 +709,52 @@ page rendering and painting.
 .. _`downgrade attack`: http://en.wikipedia.org/wiki/SSL_stripping
 .. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
 .. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
+# Exploring the Journey from Keystroke to Web Page: A Deep Dive into Browser Functionality
+
+This repository is a comprehensive exploration of the intricate processes that occur when you type "google.com" into your browser's address bar and hit enter. We leave no stone unturned in dissecting every aspect of this journey, from keyboard events to the final rendering of the web page.
+
+## Introduction
+
+The journey from keystroke to web page is a complex one, involving various components and protocols working seamlessly together. This collaborative effort aims to unravel this complexity and provide a detailed understanding of each step involved.
+
+## Understanding the Process
+
+### Keyboard Input Handling
+- **The "g" key is pressed:** We delve into the intricacies of keyboard input handling, including auto-complete functions and event triggering.
+
+### Network Communication
+- **Interrupt Handling:** Understanding how interrupts are processed by the operating system, from USB keyboard input to touch screen devices.
+
+### Protocol Handling
+- **Parse URL:** Explaining the components of a URL and the DNS lookup process, shedding light on how browsers resolve domain names to IP addresses.
+
+### HTTP Request Processing
+- **HTTP Protocol:** A step-by-step guide to HTTP request and response handling, including header parsing and content retrieval.
+
+### Rendering and Display
+- **Browser High-Level Structure:** Overview of browser components and their functions, from the user interface to the rendering engine and JavaScript execution.
+
+- **HTML Parsing:** Deep dive into the parsing algorithm and DOM tree construction, highlighting the rendering engine's role in converting HTML markup into a visual representation.
+
+- **Page Rendering:** Understanding the rendering process, CSS interpretation, and GPU rendering, elucidating how web pages are displayed on the screen.
+
+### Post-Rendering Actions
+- **Window Server:** Exploring post-rendering actions and user-induced executions, including JavaScript execution and plugin handling.
+
+## Contributing
+
+This project welcomes contributions from individuals passionate about understanding and documenting browser functionality. Whether you're an expert in network protocols, web development, or system architecture, your insights are invaluable in enriching this resource.
+
+## License
+
+All content in this repository is licensed under the terms of the Creative Commons Zero license, promoting open collaboration and knowledge sharing.
+
+## Additional Resources
+
+### What Happens When...
+- **Handling Dropped Packets:** Insight into TCP congestion control algorithms and network resilience mechanisms.
+- **TLS Handshake:** Detailed breakdown of the TLS handshake process, ensuring secure communication between clients and servers.
+- **HTTP Server Request Handling:** Server-side processing of HTTP requests, including routing, request parsing, and response generation.
+
+This README.md serves as a comprehensive guide to understanding the intricate workings of web browsing, from user input to rendered web pages. Dive in, contribute, and enrich your understanding of browser functionality!
+
