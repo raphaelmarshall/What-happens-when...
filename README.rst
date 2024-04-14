@@ -224,6 +224,21 @@ DNS lookup
 * If the DNS server is on a different subnet, the network library follows
   the ``ARP process`` below for the default gateway IP.
 
+What is DNS
+-----------
+Well, the simplest way to explain it, is it’s a large phonebook to connect names to numbers,  
+as you know we humans are better at remembering names unlike computers that like numbers everywhere,  
+so we came up with the DNS concept Computers on the network communicate using numbers just like human phone numbers,  
+but in a different format called IP(s) that mainly have two versions IPv4 and IPv6
+
+IPv6 was created to adapt to the outrageously growing number of computers on the network,
+
+DNS servers helps us to put names to these numbers to make our lives a lot easier and keep everything in order,  
+Every entry on the DNS database is linked to a IP address of a computer on the network,  
+dynamically linked using software so in case of a failure or IP change for whatever reason  
+DNS servers will point to the new IP immediately, Common DNS servers you will find in the wild  
+like Google’s own DNS server which lives at “8.8.8.8”, And the popular Cloudflare DNS server “1.1.1.1”,  
+Usually by default you must be using your ISP DNS server you can check it up right now by going to “dnsleaktest.com”.
 
 ARP process
 -----------
