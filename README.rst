@@ -681,13 +681,7 @@ Window Server
 Post-rendering and user-induced execution
 -----------------------------------------
 
-After rendering has been completed, the browser executes JavaScript code as a result
-of some timing mechanism (such as a Google Doodle animation) or user
-interaction (typing a query into the search box and receiving suggestions).
-Plugins such as Flash or Java may execute as well, although not at this time on
-the Google homepage. Scripts can cause additional network requests to be
-performed, as well as modify the page or its layout, causing another round of
-page rendering and painting.
+Post-rendering and user-induced execution encompass the phase following the completion of webpage loading, where the browser undertakes additional tasks and responds to user interactions. During this phase, JavaScript code, which is responsible for making webpages interactive, may execute in response to user actions or predefined timings. This could include actions such as typing a search query into Google's search box or triggering animations like Google Doodles. While older technologies like Flash or Java plugins may have also been involved in the past, modern web standards have largely moved away from them due to security and performance concerns. JavaScript code executed during this phase may lead to additional network requests, modifications to the webpage's content or layout, and subsequent rendering and painting of the page to reflect these changes. In essence, post-rendering and user-induced execution enhance the interactivity and dynamism of webpages, providing users with a more engaging browsing experience.
 
 .. _`Creative Commons Zero`: https://creativecommons.org/publicdomain/zero/1.0/
 .. _`"CSS lexical and syntax grammar"`: http://www.w3.org/TR/CSS2/grammar.html
