@@ -689,6 +689,17 @@ the Google homepage. Scripts can cause additional network requests to be
 performed, as well as modify the page or its layout, causing another round of
 page rendering and painting.
 
+When The "back" button is pressed in a web browser
+--------------------------------------------------
+* User Interaction: The "Back" button itself is generally found next to the address bar or navigation controls in the browser interface.
+* Browser Action: When the user inputs, the browser interprets the input as a request to move backward within the browsing history.
+* Browsing History: The browser maintains a browsing history for the current session, tracking the URLs of previously visited pages. When the "back" button is pressed, the browser retrieves the URL of the previous page from the browsing history.
+* Page Retrieval: If present locally, the browser will fetch the previous page content from the cache. In fact, this makes the navigation faster than it really should be, avoiding superfluous network requests.
+* Network Request (if necessary): If the previous page is not found in the browser cache or it is a dynamic page that will require new content, then the browser will request the server hosting such a page. The server processes the request and returns necessary HTML, CSS, JavaScript, or other resources to render the page.
+* Rendering: Once the browser receives the content of the previous page, it begins the rendering process. The HTML content is parsed to create the Document Object Model (DOM), which represents the structure of the page. The CSS stylesheets are applied to the DOM elements to determine their appearance and layout. JavaScript code associated with the page may execute, modifying the DOM or performing other actions as necessary.
+* Display: The rendered page is displayed in the browser window, replacing the current page that was being viewed.
+* History Update: After successfully navigating to the previous page, the browser updates its browsing history to reflect the change. This will allow the user to successively browse backward or forward in the browsing history, respectively, through the "back" or "forward" button. Event Handling: Also, event listeners or handlers registered to the "back" button press event may execute in response to the user action. This could be anything from analytics tracking, custom behavior the developers of this website implemented, or extensions reacting to the navigation events. Generally, with the pressing of the back button on a web browser, content retrieval and rendering continue from the browsing history or servers of pages in view. The user agent updates the interface of the browser, which may also execute more scripts or event handlers related to the navigation event.
+
 .. _`Creative Commons Zero`: https://creativecommons.org/publicdomain/zero/1.0/
 .. _`"CSS lexical and syntax grammar"`: http://www.w3.org/TR/CSS2/grammar.html
 .. _`Punycode`: https://en.wikipedia.org/wiki/Punycode
