@@ -499,6 +499,10 @@ and IIS for Windows.
 * The server verifies that google.com can accept GET requests.
 * The server verifies that the client is allowed to use this method
   (by IP, authentication, etc.).
+* Now, If theres an application server rooted within the web server after the authentication is complete
+    * the request from the client would go to the server and get it processes
+    * During processing, the application server would interact with the database for the processing of the requests
+    * After the request has been processed, the database would return a response back to the aplication server
 * If the server has a rewrite module installed (like mod_rewrite for Apache or
   URL Rewrite for IIS), it tries to match the request against one of the
   configured rules. If a matching rule is found, the server uses that rule to
