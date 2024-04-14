@@ -367,6 +367,10 @@ This send and receive happens multiple times following the TCP connection flow:
    * The other sides ACKs the FIN packet and sends its own FIN
    * The closer acknowledges the other side's FIN with an ACK
 
+A Load-balancer
+---------------
+*  The load balancer helps evenly distribute incoming requests, improving 
+   performance and reliability.
 TLS handshake
 -------------
 * The client computer sends a ``ClientHello`` message to the server with its
