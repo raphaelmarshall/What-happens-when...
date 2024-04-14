@@ -678,6 +678,13 @@ GPU Rendering
 Window Server
 -------------
 
+* The web server software, such as Microsoft Internet Information Services (IIS) or Apache H  TTP Server, receives the incoming HTTP request from the client browser.
+* The web server routes the request to the appropriate location within its file system based  on the requested URL, in this case, "google.com".It then processes the request to determin  e the specific resources needed to fulfill it.
+* The web server retrieves the requested resources from its file system or from external sou  rces, such as databases or other servers. These resources may include HTML files, CSS styl  esheets, JavaScript files, images, videos, or other types of content referenced in the req  uested web page.
+* If the requested content is dynamic, meaning it is generated on-the-fly rather than being   static files, the web server may execute server-side scripts or interact with application   servers to generate the content. This could involve querying databases, processing user in  put  , or applying business logic to customize the content for the specific request.
+* Once all necessary resources are obtained and any dynamic content is generated, the web se  rver constructs an HTTP response. This response includes the requested resources, along wi  th metadata such as HTTP headers and status codes.
+* Finally, the web server sends the HTTP response back to the client browser over the establ  ished TCP/IP connection. The response contains the requested resources and any additional   instructions or data needed to render the web page correctly.
+
 Post-rendering and user-induced execution
 -----------------------------------------
 
