@@ -209,8 +209,10 @@ Check HSTS list
 DNS lookup
 ----------
 
-* Browser checks if the domain is in its cache. (to see the DNS Cache in
-  Chrome, go to `chrome://net-internals/#dns <chrome://net-internals/#dns>`_).
+* If the domain is found in the cache and the stored content is still considered
+ valid (based on factors like expiration date and cache-control headers),
+ the browser can retrieve the content directly from its cache without needing
+ to make a new request to the server. This process is known as a cache hit.
 * If not found, the browser calls ``gethostbyname`` library function (varies by
   OS) to do the lookup.
 * ``gethostbyname`` checks if the hostname can be resolved by reference in the
@@ -592,7 +594,9 @@ HTML cannot be parsed using the regular top-down or bottom-up parsers.
 
 The reasons are:
 
-* The forgiving nature of the language.
+* The forgiving nature of the language, HTML is not strictly defined by
+  a grammar that can be parsed in a linear fashion. It contains many ambiguities
+  and irregularities, such as optional tags, self-closing tags.
 * The fact that browsers have traditional error tolerance to support well
   known cases of invalid HTML.
 * The parsing process is reentrant. For other languages, the source doesn't
