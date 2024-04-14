@@ -224,6 +224,11 @@ DNS lookup
 * If the DNS server is on a different subnet, the network library follows
   the ``ARP process`` below for the default gateway IP.
 
+* If the website or application is utilizing a CDN, the DNS resolution may
+  return the IP address(es) of the CDN's edge servers instead of the origin server's
+  IP address. CDNs often use anycast routing to direct the user's request to the
+  nearest edge server based on network topology and proximity
+
 
 ARP process
 -----------
