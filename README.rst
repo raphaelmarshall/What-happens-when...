@@ -224,6 +224,7 @@ DNS lookup
 * If the DNS server is on a different subnet, the network library follows
   the ``ARP process`` below for the default gateway IP.
 
+![What happens when you type google and press enter](https://medium.com/@tafaranyamhunga/what-happens-when-you-type-www-google-com-in-your-browser-and-press-enter-6cc6a6c5df42)
 
 ARP process
 -----------
