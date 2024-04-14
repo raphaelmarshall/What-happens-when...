@@ -223,7 +223,7 @@ DNS lookup
   ``ARP process`` below for the DNS server.
 * If the DNS server is on a different subnet, the network library follows
   the ``ARP process`` below for the default gateway IP.
-
+* To know the IP address of a URL, one would have to ask a DNS query
 
 ARP process
 -----------
