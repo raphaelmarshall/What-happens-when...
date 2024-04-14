@@ -191,7 +191,6 @@ Convert non-ASCII Unicode characters in the hostname
 * Since the hostname is ``google.com`` there won't be any, but if there were
   the browser would apply `Punycode`_ encoding to the hostname portion of the
   URL.
-
 Check HSTS list
 ---------------
 * The browser checks its "preloaded HSTS (HTTP Strict Transport Security)"
@@ -223,6 +222,8 @@ DNS lookup
   ``ARP process`` below for the DNS server.
 * If the DNS server is on a different subnet, the network library follows
   the ``ARP process`` below for the default gateway IP.
+* However, if the computer used at the moment is disconnected or doesn't
+  have access to the internect, this step is skipped.
 
 
 ARP process
@@ -296,6 +297,8 @@ the default gateway it can resume its DNS process:
 * If the local/ISP DNS server does not have it, then a recursive search is
   requested and that flows up the list of DNS servers until the SOA is reached,
   and if found an answer is returned.
+* However, if the computer used at the moment is disconnected or doesn't
+  have access to the internect, this step is skipped.
 
 Opening of a socket
 -------------------
@@ -366,6 +369,8 @@ This send and receive happens multiple times following the TCP connection flow:
    * The closer sends a FIN packet
    * The other sides ACKs the FIN packet and sends its own FIN
    * The closer acknowledges the other side's FIN with an ACK
+* However, if the computer used at the moment is disconnected or doesn't
+  have access to the internect, this step is skipped.
 
 TLS handshake
 -------------
