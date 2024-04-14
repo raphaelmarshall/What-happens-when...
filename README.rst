@@ -37,7 +37,8 @@ and prioritize results based on search history, bookmarks, cookies, and
 popular searches from the internet as a whole. As you are typing
 "google.com" many blocks of code run and the suggestions will be refined
 with each keypress. It may even suggest "google.com" before you finish typing
-it.
+it. 
+The physical switch beneath the "g" key is triggered, sending an electrical signal to the computer's keyboard controller. The keyboard controller then processes this signal and communicates with the computer's operating system. The operating system, in turn, interprets the signal as a request to input the character 'g'. Depending on the active application or window, the 'g' character may appear on the screen, be processed as part of a command or text input, or trigger a specific function within the software. 
 
 The "enter" key bottoms out
 ---------------------------
