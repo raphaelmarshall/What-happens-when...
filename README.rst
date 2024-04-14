@@ -678,6 +678,13 @@ GPU Rendering
 Window Server
 -------------
 
+Server-side processing with technologies like PHP, Node.js, or Python can work smoothly on a Windows Server environment. Here's how each of these technologies canbe utilized on a Windows Server:
+* PHP on Windows Server
+  PHP is fully compatible with Windows Server environments.
+You can install PHP on a Windows Server by downloading the PHP binaries from the official PHP website or using a web platform installer like XAMPP, WampServer, or Microsoft Web Platform Installer.
+Once PHP is installed, you can configure it to work with a web server like Apache HTTP Server or Microsoft Internet Information Services (IIS).
+PHP scripts can then be executed on the server to generate dynamic content, interact with databases (e.g., MySQL, SQL Server), and handle HTTP requests.
+
 Post-rendering and user-induced execution
 -----------------------------------------
 
