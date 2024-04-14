@@ -223,6 +223,17 @@ DNS lookup
   ``ARP process`` below for the DNS server.
 * If the DNS server is on a different subnet, the network library follows
   the ``ARP process`` below for the default gateway IP.
+* ``DNS Caching in Browsers`` When you visit a website, your browser initiates a DNS lookup to translate the domain name (e.g., google.com) into an IP address that servers understand.
+To avoid performing a DNS lookup every time you visit the same website or access the same resources (like images, scripts, etc.), modern browsers implement DNS caching.
+DNS caching stores the IP address obtained from DNS lookups locally on your device for a certain period, known as the TTL (Time to Live) value.
+ ``Importance of TTL in DNS Records`` TTL is a parameter in DNS records that specifies the amount of time a DNS resolver or caching server can store the IP address before it needs to perform a new DNS lookup.
+The TTL value is set by the owner of the domain (e.g., the website administrator or DNS provider) when configuring DNS records. Common TTL values are in seconds, ranging from a few minutes to several hours.
+The importance of TTL lies in balancing the trade-off between caching efficiency and DNS record freshness. Here's why TTL is crucial:
+ ``Caching Efficiency`` A longer TTL allows DNS resolvers and caching servers to store IP addresses for a more extended period, reducing the frequency of DNS lookups. This improves browsing speed and reduces network traffic.
+ ``DNS Record Freshness`` However, a shorter TTL ensures that DNS records are updated more frequently. This is crucial when changes occur, such as server migrations or IP address changes. A shorter TTL means that DNS caches will refresh their records sooner, reflecting the updated information.
+ ``Failover and Redundancy`` Short TTL values are also essential for implementing failover and redundancy strategies. For example, in case of server failures or load balancing configurations, a short TTL allows DNS changes to propagate quickly, redirecting traffic to healthy servers.
+ ``Efficient Name Resolution`` TTL plays a vital role in ensuring efficient name resolution. By carefully setting TTL values based on the frequency of DNS record changes and the desired caching efficiency, website owners can optimize name resolution for their users.
+Browsers rely on DNS caching to reduce latency and improve performance. When a DNS record's TTL expires, the browser performs a new DNS lookup to fetch the updated IP address, ensuring that users always access the latest version of a website or web resource.
 
 
 ARP process
