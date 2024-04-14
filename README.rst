@@ -1,11 +1,10 @@
-What happens when...
+What happens when you type google.com in your browser and press Enter
 ====================
 
 This repository is an attempt to answer the age-old interview question "What
 happens when you type google.com into your browser's address box and press
 enter?"
 
-# What happens when you type google.com in your browser and press Enter
 
 In today’s interconnected world, where the internet links billions of individuals worldwide, it’s crucial to understand the intricate processes driving our online experiences. From accessing web pages to exploring search engines, each click triggers a series of complex operations ensuring seamless connectivity and access to information. Let’s take a journey behind the scenes of our online interactions, exploring the fundamental elements of the internet infrastructure.
 
