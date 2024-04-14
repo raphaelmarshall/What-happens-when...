@@ -677,7 +677,8 @@ GPU Rendering
 
 Window Server
 -------------
-
+A window server does not directly play a role in the proces as it is primarily involved in managing graphical user interfaces in operating systems.
+It is a system service that provides an interface for client applications to create, update, and delete windows on the screen, as well as handle user input events like mouse clicks and key presses.
 Post-rendering and user-induced execution
 -----------------------------------------
 
