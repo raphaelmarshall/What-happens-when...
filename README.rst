@@ -211,12 +211,12 @@ DNS lookup
 
 * Browser checks if the domain is in its cache. (to see the DNS Cache in
   Chrome, go to `chrome://net-internals/#dns <chrome://net-internals/#dns>`_).
-* If not found, the browser calls ``gethostbyname`` library function (varies by
+* If not found, the browser calls ``getaddrinfo`` library function (varies by
   OS) to do the lookup.
-* ``gethostbyname`` checks if the hostname can be resolved by reference in the
+* ``getaddrinfo`` checks if the hostname can be resolved by reference in the
   local ``hosts`` file (whose location `varies by OS`_) before trying to
   resolve the hostname through DNS.
-* If ``gethostbyname`` does not have it cached nor can find it in the ``hosts``
+* If ``getaddrinfo`` does not have it cached nor can find it in the ``hosts``
   file then it makes a request to the DNS server configured in the network
   stack. This is typically the local router or the ISP's caching DNS server.
 * If the DNS server is on the same subnet the network library follows the
@@ -224,6 +224,19 @@ DNS lookup
 * If the DNS server is on a different subnet, the network library follows
   the ``ARP process`` below for the default gateway IP.
 
+Getaddrinfo Function
+--------------------
+
+The getaddrinfo function is a system call used for resolving a given hostname
+to one or more IP addresses, along with additional socket-related information.
+It combines the functionalities provided by the older gethostbyname and
+getservbyname functions into a single, more versatile interface.
+
+When called, getaddrinfo returns a linked list of addrinfo structures.
+Each structure contains essential information about a potential address,
+including the address family (IPv4 or IPv6), the IP address in binary format,
+the port number in network byte order, and other relevant details necessary for
+establishing network connections.
 
 ARP process
 -----------
@@ -709,3 +722,4 @@ page rendering and painting.
 .. _`downgrade attack`: http://en.wikipedia.org/wiki/SSL_stripping
 .. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
 .. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
+.. _`getaddrinfo`: https://man7.org/linux/man-pages/man3/getaddrinfo.3.html
