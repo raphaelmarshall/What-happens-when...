@@ -206,6 +206,11 @@ Check HSTS list
   `downgrade attack`_, which is why the HSTS list is included in modern web
   browsers.)
 
+Firewall
+----------
+
+ Before your request leaves your computer or network, it must pass through a firewall. Firewalls are security devices that monitor incoming and outgoing network traffic. They function according to predetermined security rules and help protect your network from unauthorized access and threats. The firewall checks the nature of the request against its rules and, if it is deemed safe, allows it to pass through.
+
 DNS lookup
 ----------
 
@@ -223,6 +228,7 @@ DNS lookup
   ``ARP process`` below for the DNS server.
 * If the DNS server is on a different subnet, the network library follows
   the ``ARP process`` below for the default gateway IP.
+* If no DNS server is able to provide the IP address for the requested URL, the user will receive an error message indicating that the website could not be found.
 
 
 ARP process
