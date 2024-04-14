@@ -1,0 +1,30 @@
+
+what Happens When You Type https://www.google.com?
+Have you ever wondered what happens behind the scenes when you type a web address into your browser? It's a fascinating journey that involves a series of intricate processes working seamlessly to deliver the requested web page. In this blog post, we'll take a closer look at each step in this journey, breaking down the complexities into digestible bits.
+
+Internet's Infrastructure
+First, let's set the stage. The internet is a huge network that connects computers, servers, and other devices worldwide. It's often described as a "network of networks," with interconnected systems collaborating to make the internet function. Every device connected to the internet, whether it's your computer, smartphone, or tablet, has a unique identifier known as an IP (Internet Protocol) address.
+
+Translation from Domain Name to IP Address
+When you type a web address like https://www.google.com into your browser and hit enter, your browser first needs to translate the human-readable domain name ("www.google.com") into an IP address. It does this by sending a request to a Domain Name Service (DNS) server, which looks up the corresponding IP address and sends it back to your browser.
+
+Initiating a TCP Connection
+Having  the IP address, your browser initiates a Transmission Control Protocol (TCP) connection with the server hosting Google's website. TCP ensures reliable communication by breaking data into packets and managing transmission between your browser and the server.
+
+Passing Through a Firewall
+Before establishing the TCP connection, the request may pass through a firewall, a security component that controls and monitors incoming and outgoing traffic. The firewall enforces rules and protocols to protect against various threats, ensuring a secure connection between your browser and the server.
+
+
+HTTPS/SSL Encryption
+Security is paramount on the internet, especially when exchanging sensitive information. That's where the Security Socket Layer (SSL) or its successor, Transport Layer Security (TLS), comes into play. When you see "https://" in a URL, it indicates that the communication between your browser and the server is encrypted, providing confidentiality and integrity.
+
+Load Balancing
+To handle the massive traffic efficiently, websites like Google employ multiple servers and a load balancer. The load balancer distributes incoming traffic across these servers, ensuring that no single server becomes overwhelmed. This approach enhances performance, reliability, and scalability, ensuring a smooth browsing experience for users worldwide.
+
+Conclusion
+The next time you type a web address into your browser, remember the complex journey it undertakes behind the scenes. From translating domain names to IP addresses, establishing secure connections, passing through firewalls, and load-balancing traffic, each step plays a crucial role in delivering the desired content to your fingertips. Understanding these processes gives us a deeper appreciation for the intricate mechanisms at work on the internet.
+Stay curious, and keep exploring the fascinating world of technology!
+
+#ALX_SE
+#DoHardThings
+
