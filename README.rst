@@ -25,6 +25,51 @@ Table of Contents
    :backlinks: none
    :local:
 
+### What happens when you type google.com into your browser's address box and press enter?
+<a href="https://medium.com/@idowu.olayiwola.bamidele/hey-hol-up-what-happens-when-you-type-https-www-google-com-in-your-browser-and-press-enter-97a63a69c01b">Link to my Blog post on this</a>
+### Unraveling the web: The Untold Story of Typing https://www.google.com
+
+“Wait a minute!”
+Hey! Hol’ up! Stop! What really happens when you type a seemingly innocent URL like https://www.google.com into your browser and press Enter? Have you ever thought of what happens behind the scene? The journey of a web request is an interesting one, navigating through a complex network of systems and protocols to deliver the webpage you requested. Let’s go over the step by step process, shall we? :)
+
+### STEP 1: DNS Request(Unraveling the Domain Name)
+When typing a URL, such as https://www.google.com, into your browser, it works like a phonebook by translating the human-readable domain name (www.google.com) into an IP address that servers can understand. This translation is done through a Domain Name System (DNS) request. Your computer sends a query to a DNS resolver(refer to fig 1), which then searches for the corresponding IP address associated with the domain name(www.google.com).
+
+
+### STEP 2: TCP/IP(The Language of the Web)
+Immediately the IP address is retrieved, the browser sends a request to the server hosting the website. This communication is referred to as TCP/IP (Transmission Control Protocol/Internet Protocol). The TCP is a reliable “postman”, ensuring the data packets containing a request reaches its destination and that it’s delivered in the correct order and without errors. The Internet Protocol (IP) takes charge of the addressing and routing of these packets across the network to the correct server. The TCP/IP handshake(refer to fig 2) is an important process that occurs when two devices establish a connection over a TCP/IP network.
+
+
+### STEP 3: Firewall(The Gatekeeper)
+During the TCP/IP connection, your request may encounter a firewall(refer to fig 3). A firewall is a network security device that monitors incoming and outgoing network traffic and decides whether to allow or block specific traffic based on a defined set of security rules. Firewalls act as a huge ‘fence’ between your computer and potentially harmful external sources, filtering out malicious or unauthorized access to the server(s).
+
+### STEP 4: HTTPS/SSL(Encryption for a Secure Journey)
+In order to secure the data exchanged between your browser and the server, HTTPS (Hypertext Transfer Protocol Secure) is used.
+When you see a padlock icon next to the URL and “https” instead of “http,” it indicates a secure connection. This is done by the HTTPS which encrypts the communication using SSL (Secure Sockets Layer) or TLS (Transport Layer Security) protocols, to protect sensitive information like passwords from eavesdroppers and hackers. 
+
+### STEP 5: Load Balancer(Distributing the Traffic)
+In the case of large-scale websites such as https://www.google.com, incoming traffic is often distributed across multiple servers to ensure optimal performance and prevent overload.
+A Load balancers play an important in mitigating the effect of the ever-increasing web traffic ensuring high availability and reliability of applications and websites. It can also perform health checks on servers, routing traffic away from any servers that are experiencing issues.
+
+### STEP 6: Web Server(Delivering the Webpage)
+As soon as the request gets to the appropriate server, the web server software — such as Apache, Nginx, or Microsoft IIS — processes the request and retrieves the requested webpage or resources. The web server generates the HTML content dynamically or retrieves it from a cache, depending on the nature of the request. It then assembles and sends this information back to your computer.(refer to fig 3)
+
+### STEP 7: Application Server(Dynamic Content)
+While web servers handle static content, some websites use application servers to generate dynamic content. It sits between the client-side application (like a web browser) and the backend databases and other resources required by the application.
+This server(s) executes the code responsible for generating dynamic content, interacting with databases to fetch the most relevant results and personalize your search experience, and performing other server-side tasks. Common examples include Node.js, Ruby on Rails, and Java EE application servers.
+
+### STEP 8: Database(The Information Powerhouse)
+Finally, many websites rely on a central repository known as databases to store and retrieve information dynamically. When your request involves accessing or updating data, the application server communicates with the database server, which manages the storage and retrieval of data.
+Popular database systems include MySQL, PostgreSQL, MongoDB, and Oracle.
+
+####  To conclude,
+In conclusion, what seems like a simple act — typing https://www.google.com involves a fascinating interplay of technologies. Starting from the DNS resolution to database interaction, each component plays a huge role in delivering the seamless web experience we often take for granted.
+By understanding this process, you gain valuable insight into the infrastructure that powers of the internet and the vital role each component plays in delivering information at your fingertips.
+It’s truly a marvel of modern technology.
+
+
+### Below is the original README.rst from the original project.
+
 The "g" key is pressed
 ----------------------
 The following sections explain the physical keyboard actions
