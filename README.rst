@@ -678,6 +678,8 @@ GPU Rendering
 Window Server
 -------------
 
+ The Window Server plays a crucial role in managing network communications, ensuring security, and facilitating server-side processing. It acts as a guardian, protecting against cyber threats and unauthorized access, while also orchestrating the execution of web applications and the delivery of dynamic content to users.
+
 Post-rendering and user-induced execution
 -----------------------------------------
 
