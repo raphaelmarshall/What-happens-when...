@@ -219,6 +219,13 @@ DNS lookup
 * If ``gethostbyname`` does not have it cached nor can find it in the ``hosts``
   file then it makes a request to the DNS server configured in the network
   stack. This is typically the local router or the ISP's caching DNS server.
+* Where the IP was not found in the cache of the browser and the OS, it is due
+  to one of two reasons:
+  1. google.com has never been visited before on the device.
+  2. It was removed from the cache when the Time To Live (TTL) elapsed. TTL is
+  the duration that a DNS record is allowed to be cached by a DNS resolver or other
+  intermediary devices like DNS Servers, web browsers, or OS. It is usually 
+  measured in seconds.
 * If the DNS server is on the same subnet the network library follows the
   ``ARP process`` below for the DNS server.
 * If the DNS server is on a different subnet, the network library follows
@@ -296,6 +303,15 @@ the default gateway it can resume its DNS process:
 * If the local/ISP DNS server does not have it, then a recursive search is
   requested and that flows up the list of DNS servers until the SOA is reached,
   and if found an answer is returned.
+* The recursive search starts from the root server. We have 13 root servers
+  labelled A to M where each has multiple physical servers deployed in various
+  locations across the globe. The root servers have one job and that is to refer
+  the resolver to the Top Level Domain (TLD) Servers e.g .com, .net etc.
+* Next, the TLD server directs the resolver to the Authoritative DNS Server for
+  the specified domain. In this case, it is the .com TLD server.
+* Finally, the resolver contacts the Authoritative DNS server for the IP
+  address corresponding to the domain name requested. If found, the answer
+  is returned, else it does not exist. The recursive search ends here.
 
 Opening of a socket
 -------------------
