@@ -710,4 +710,4 @@ page rendering and painting.
 .. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
 .. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
 
-My contribution - Victor Amajuoyi
+My contribution - Victor Amajuoyi.
