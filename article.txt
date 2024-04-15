@@ -1,0 +1,36 @@
+What happens when you type google.com in your browser and press Enter?
+
+
+Thanks to abstraction, computer users can access websites without needing to concern themselves with the complex interplay of technologies and protocols that facilitate the delivery of web pages to their screens. In this article, we'll take a deep dive into the journey of a simple request to https://www.google.com. 
+1. let's break down each part of the URL
+ Protocol (https://): This indicates the protocol used to access the website. "HTTPS" stands for Hypertext Transfer Protocol Secure, which encrypts data exchanged between your browser and the server, enhancing security. It ensures that your communication with the website is encrypted and protected from eavesdropping or tampering.
+ Subdomain (www): The "www" subdomain is a common prefix in URLs, typically used to denote the World Wide Web. In the past, it was a standard convention to include "www" in URLs, but nowadays, many websites omit it or redirect users to the version without it. However, some websites still use it as part of their URL structure.
+Second-level Domain (google): This is the unique name of the website, often referred to as the domain name. It identifies the specific organization, company, or entity that owns the website. In this case, "google" is the second-level domain of the URL, indicating that the website belongs to Google.
+Top-level Domain (com):The highest level in the domain hierarchy, indicating the type of entity to which the website belongs. Common TLDs include ".com" (commercial), ".org" (organization), ".edu" (educational), ".net" (network)... In this case, ".com" indicates that Google's website is associated with a commercial entity.
+2.DNS request
+The journey begins with the Domain Name System (DNS) request. When you type https://www.google.com into your browser(a domain name instead of an IP address. Domains are easier to remember than numerical IP addresses), the first step is for your browser to translate that domain name into an IP address.
+Initially, the browser checks its local DNS cache for any recently retrieved records. If not found, it examines the operating system cache for the IP address. Should both caches come up empty, a request is dispatched to the DNS server.
+There are two main types of DNS requests: Recursive and non-Recursive. In a Recursive request, your computer asks a DNS resolver server for the IP address of the domain. If the resolver server has the information, it responds with the corresponding IP address, allowing your computer to continue the networking process. In a non-Recursive request, if the DNS resolver server doesn't have the IP address, it needs to ask other DNS servers for the information.
+The DNS resolution process follows a specific order:
+Root Server: Analyzes the suffix of the URL (like .com or .gov) and directs the request to a Top Level Domain (TLD) server.
+Top Level Domain (TLD) Server: Finds the authoritative server responsible for the domain extension and sends the request there.
+Authoritative Server: Checks its database to find the corresponding entry for the requested domain and provides the IP address to the DNS resolver server.
+DNS Resolver Server: Gives the IP address to your computer if found, enabling it to continue its network processes.
+Once the IP address is obtained, it's stored in a cache in your browser or computer, speeding up future lookups. This cache has an expiration time determined by the DNS.
+DNS servers store IP information using various types of records. The main type is an A record, which directly links a domain with an IP address. Other records, like CNAME, relate one domain to another, allowing for aliases like www.google.com redirecting to google.com.
+3.TCP/IP
+Next, your browser establishes a Transmission Control Protocol (TCP) connection to the server using Internet Protocol (IP). This ensures that data packets can be reliably transmitted and received between your computer and the server.
+4. HTTPS/SSL
+After TCP/IP connection is done, the browser then communicates with the server using the protocol HTTPS in the URL. This protocol delineates various types of requests (such as GET, POST, and PUT) and responses, all secured by the standard encryption protocol known as Secure Sockets Layer (SSL) that ensures that data traffic between the client and the server infrastructure, including the load balancer, is encrypted and decrypted, safeguarding the integrity and confidentiality of the transmitted information.
+5.Firewall
+A firewall is a digital security mechanism that monitors both incoming and outgoing network traffic. The firewall checks the incoming request to ensure it complies with the organization's security policies before allowing it to proceed.
+6. Load-balancer
+A load balancer is a critical component in computer networks and web applications that distributes incoming network traffic across multiple servers or resources. Its primary purpose is to evenly distribute the workload among the available resources to optimize performance, enhance reliability, and ensure high availability.
+When you request https://www.google.com, a load balancer determines which server in Google's server farm will handle your request, optimizing performance and reliability.
+7.Web& Application Server
+Upon reaching the appropriate server, typically a web server like Apache or Nginx, the requested web page is retrieved and prepared to be sent back to your browser.
+In some cases, the web server may need to interact with an application server, such as Node.js or Django, to execute the logic required to generate dynamic content or perform specific tasks requested by the client.
+8.Database
+If the requested web page or resource relies on data stored in a database, the application server may query the database to retrieve the necessary information. Databases, such as MySQL or MongoDB, store and organize vast amounts of data that power dynamic web applications.
+
+The collaborative operation of these diverse elements ensures the presentation of webpages on the client's browser.
