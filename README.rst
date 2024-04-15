@@ -414,6 +414,18 @@ control`_. This varies depending on the sender; the most common algorithms are
   each packet acknowledged. If a packet is dropped, the window reduces
   exponentially until another packet is acknowledged.
 
+Firewall
+--------
+A firewall is like a digital gatekeeper for your network, controlling incoming and outgoing traffic based on predetermined security rules. It can be hardware, software, or a combination of both. Firewalls inspect data packets and determine whether to allow or block them based on factors like source, destination, port, and protocol. This helps prevent unauthorized access, malware attacks, and other security threats.
+
+Outgoing Data Packet: 
+Your computer sends out a request packet containing information like your IP address, the destination (google.com), and the port (usually port 80 for HTTP).Firewall Inspection: 
+The firewall intercepts the outgoing packet and checks its rules. For example, it might have a rule allowing outgoing HTTP requests to trusted websites like google.com.
+Allow or Block Decision:
+If the firewall's rules permit outgoing traffic to google.com, it allows the packet to pass through. Otherwise, it blocks the request, preventing your computer from accessing google.com.Response Packet: 
+If the request is allowed, google.com's servers respond with data packets containing the requested webpage content. These incoming packets are also inspected by the firewall before being allowed into your network.Data Transfer: 
+If all checks pass, the data packets are transmitted between your computer and google.com's servers, allowing you to view the webpage in your browser.
+
 HTTP protocol
 -------------
 
