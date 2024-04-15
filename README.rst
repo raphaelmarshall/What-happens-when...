@@ -224,7 +224,42 @@ DNS lookup
 * If the DNS server is on a different subnet, the network library follows
   the ``ARP process`` below for the default gateway IP.
 
+DNS Resolution
+--------------
+Once the DNS server's MAC address is known, the network library sends a DNS query to the DNS server. This query contains the hostname "google.com" and requests the corresponding IP address.
 
+The DNS server checks its records to see if it has a cached entry for "google.com". If not found, it recursively queries other DNS servers until it finds the authoritative DNS server responsible for the "google.com" domain.
+
+The authoritative DNS server responds with the IP address associated with "google.com", such as IPv4 (e.g., 172.217.3.206) and/or IPv6 addresses.
+
+Establishing a TCP Connection
+-----------------------------
+Armed with the IP address of "google.com", the browser initiates a TCP (Transmission Control Protocol) connection to the server. This involves a three-way handshake:
+
+SYN (Synchronize): The browser sends a SYN packet to the server, indicating its intent to establish a connection.
+SYN-ACK (Synchronize-Acknowledge): The server responds with a SYN-ACK packet, acknowledging the request and indicating its readiness to establish a connection.
+ACK (Acknowledge): Finally, the browser sends an ACK packet back to the server, confirming the connection establishment.
+HTTPS Handshake
+---------------
+If the website supports HTTPS (HyperText Transfer Protocol Secure), an additional layer of security is added through SSL/TLS encryption. This involves a handshake process:
+
+**ClientHello: The browser sends a ClientHello message to the server, along with supported cryptographic algorithms and other parameters.
+ServerHello: The server responds with a ServerHello message, selecting the appropriate cryptographic parameters and sending its SSL certificate.
+**Certificate Verification: The browser verifies the server's SSL certificate to ensure it's valid and issued by a trusted Certificate Authority (CA).
+**Key Exchange: Both the browser and the server exchange cryptographic keys to establish a secure communication channel.
+Finished: Finally, both parties exchange Finished messages to confirm the handshake's success and begin encrypted data transmission.
+HTTP Request
+With the TCP connection established and encrypted (if using HTTPS), the browser sends an HTTP GET request to the server for the resource specified in the URL ("/" for the main page in this case).
+
+Server Processing
+-----------------
+Upon receiving the HTTP request, the server processes it and generates an appropriate HTTP response. For "google.com," the server may respond with HTML content, along with other resources like CSS stylesheets, JavaScript files, images, etc.
+
+Content Rendering
+-----------------
+Finally, the browser receives the HTTP response from the server and begins rendering the content. This involves parsing HTML, executing JavaScript, applying CSS styles, and rendering the visual elements on the screen.
+
+In conclusion, typing "google.com" into your browser's address box and pressing Enter triggers a series of intricate processes, from ARP resolution and DNS lookup to TCP connection establishment, HTTPS handshake, HTTP request/response, and content rendering. Each step plays a crucial role in delivering the requested web page to your browser's viewport, providing a seamless browsing experience.
 ARP process
 -----------
 
