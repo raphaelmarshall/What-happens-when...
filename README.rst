@@ -162,6 +162,23 @@ sends the character to the ``window manager`` (DWM, metacity, i3, etc), so the
 The graphical API of the window  that receives the character prints the
 appropriate font symbol in the appropriate focused field.
 
+URL Aliasing
+------------
+
+Most of the time, the user does not input the protocol 
+or the subdomain.
+
+    - ``google.com`` instead of ``https://www.google.com``
+
+Before initiating the DNS request, the browser may perform 
+URL aliasing. In this step, if the entered URL lacks a protocol 
+(e.g., ``http://`` or ``https://``), the browser assumes the default 
+protocol, typically ``http://``. Additionally, if the URL lacks a 
+subdomain (e.g., ``www``), the browser may prepend ``www`` to the domain name. 
+After aliasing, the browser proceeds with the DNS resolution process 
+described in the subsequent step.
+
+
 Parse URL
 ---------
 
