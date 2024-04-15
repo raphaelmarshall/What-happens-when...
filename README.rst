@@ -480,6 +480,24 @@ resolving the other domain, and follows all steps up to this point for that
 domain. The ``Host`` header in the request will be set to the appropriate
 server name instead of ``google.com``.
 
+Firewalls and Network security
+------------------------------
+After the HTTP protocol is used and a request is ready to be sent, it must first pas
+s through various security measures. One of them is a firewall.
+
+A firewall is a network security system that moniters and controls incoming and outg
+oing network traffic based on defined security rules. It acts like a barrier between
+ a trusted internal network and untrusted external network (internet).
+
+Firewalls could be either hardware or softwares or both. a firewall is also useful f
+or allowing remote access to a private network through secure authentication certifi
+cated and logins.
+
+In the concept of browsing google.com, the firewall comes into play when the outgoin
+g request from your computer needs to be sent over the internet. The firewall will i
+nspect the packet of information for any malicious threats and based on its set rule
+s, will either allow or deny the packet to be sent.
+
 HTTP Server Request Handle
 --------------------------
 The HTTPD (HTTP Daemon) server is the one handling the requests/responses on
