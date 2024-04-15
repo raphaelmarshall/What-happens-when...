@@ -369,33 +369,77 @@ This send and receive happens multiple times following the TCP connection flow:
 
 TLS handshake
 -------------
-* The client computer sends a ``ClientHello`` message to the server with its
-  Transport Layer Security (TLS) version, list of cipher algorithms and
-  compression methods available.
+The TLS (Transport Layer Security) handshake is a vital process that occurs when a client and server establish a secure connection. It ensures the confidentiality and integrity of data transmitted over the network. Let's break down the TLS handshake into its essential steps:
 
-* The server replies with a ``ServerHello`` message to the client with the
-  TLS version, selected cipher, selected compression methods and the server's
-  public certificate signed by a CA (Certificate Authority). The certificate
-  contains a public key that will be used by the client to encrypt the rest of
-  the handshake until a symmetric key can be agreed upon.
+1. **ClientHello**: 
+   - The client initiates the handshake by sending a ClientHello message to the server.
+   - Example:
+     ```
+     ClientHello {
+         ClientVersion: TLS 1.2
+         CipherSuites: [TLS_RSA_WITH_AES_128_CBC_SHA, ...]
+         ...
+     }
+     ```
 
-* The client verifies the server digital certificate against its list of
-  trusted CAs. If trust can be established based on the CA, the client
-  generates a string of pseudo-random bytes and encrypts this with the server's
-  public key. These random bytes can be used to determine the symmetric key.
+2. **ServerHello**:
+   - Upon receiving the ClientHello, the server responds with a ServerHello message, confirming the connection and specifying the selected cipher suite and other parameters.
+   - Example:
+     ```
+     ServerHello {
+         ServerVersion: TLS 1.2
+         CipherSuite: TLS_RSA_WITH_AES_128_CBC_SHA
+         ...
+     }
+     ```
 
-* The server decrypts the random bytes using its private key and uses these
-  bytes to generate its own copy of the symmetric master key.
+3. **Key Exchange**:
+   - If necessary, the server and client perform a key exchange to establish symmetric encryption keys.
+   - Example:
+     ```
+     Diffie-Hellman parameters exchanged...
+     ```
 
-* The client sends a ``Finished`` message to the server, encrypting a hash of
-  the transmission up to this point with the symmetric key.
+4. **Authentication**:
+   - The server presents its digital certificate to prove its identity to the client.
+   - Example:
+     ```
+     Certificate {
+         ...
+         Public Key: RSA (2048 bits)
+         ...
+     }
+     ```
 
-* The server generates its own hash, and then decrypts the client-sent hash
-  to verify that it matches. If it does, it sends its own ``Finished`` message
-  to the client, also encrypted with the symmetric key.
+5. **Client Authentication (optional)**:
+   - If required, the client may also present its digital certificate to the server.
+   - Example:
+     ```
+     Client Certificate {
+         ...
+         Public Key: RSA (2048 bits)
+         ...
+     }
+     ```
 
-* From now on the TLS session transmits the application (HTTP) data encrypted
-  with the agreed symmetric key.
+6. **Session Key Generation**:
+   - Both client and server use the exchanged information to generate session keys for symmetric encryption.
+   - Example:
+     ```
+     Session Key: AES-128
+     ```
+
+7. **Finished**:
+   - Finally, both parties exchange Finished messages to confirm that the handshake is complete and that subsequent data transmission will be encrypted.
+   - Example:
+     ```
+     Finished {
+         ...
+     }
+     ```
+
+This breakdown illustrates the intricate dance between client and server that culminates in the establishment of a secure TLS connection. Understanding the TLS handshake is crucial for ensuring secure communication over the internet.
+
 
 If a packet is dropped
 ----------------------
