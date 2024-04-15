@@ -206,23 +206,14 @@ Check HSTS list
   `downgrade attack`_, which is why the HSTS list is included in modern web
   browsers.)
 
-DNS lookup
-----------
+Understanding the Basics:
 
-* Browser checks if the domain is in its cache. (to see the DNS Cache in
-  Chrome, go to `chrome://net-internals/#dns <chrome://net-internals/#dns>`_).
-* If not found, the browser calls ``gethostbyname`` library function (varies by
-  OS) to do the lookup.
-* ``gethostbyname`` checks if the hostname can be resolved by reference in the
-  local ``hosts`` file (whose location `varies by OS`_) before trying to
-  resolve the hostname through DNS.
-* If ``gethostbyname`` does not have it cached nor can find it in the ``hosts``
-  file then it makes a request to the DNS server configured in the network
-  stack. This is typically the local router or the ISP's caching DNS server.
-* If the DNS server is on the same subnet the network library follows the
-  ``ARP process`` below for the DNS server.
-* If the DNS server is on a different subnet, the network library follows
-  the ``ARP process`` below for the default gateway IP.
+Computers communicate using binary code, consisting of zeros and ones. When you enter a web address like “https://www.google.com," your browser needs to translate that human-readable domain name into an IP address, the unique numerical identifier of the server hosting the website. This translation process is called a DNS (Domain Name System) request.
+
+Step-by-Step Breakdown:
+
+    DNS Resolution:
+    Your browser initiates a DNS request to find the IP address associated with “www.google.com." This request is sent to a DNS server, which acts like a phonebook for translating domain names into IP addresses. The DNS server searches its records and either provides the IP address immediately (if cached) or performs a recursive search to find the authoritative servers responsible for “www.google.com." Once obtained, the IP address (e.g., 8.8.8.8) is sent back to your browser.
 
 
 ARP process
