@@ -622,12 +622,23 @@ any invalid content and go on.
 CSS interpretation
 ------------------
 
-* Parse CSS files, ``<style>`` tag contents, and ``style`` attribute
-  values using `"CSS lexical and syntax grammar"`_
-* Each CSS file is parsed into a ``StyleSheet object``, where each object
-  contains CSS rules with selectors and objects corresponding CSS grammar.
-* A CSS parser can be top-down or bottom-up when a specific parser generator
-  is used.
+CSS (Cascading Style Sheets) interpretation refers to the process by which web browsers understand and apply CSS rules to HTML elements, thereby defining the visual presentation of web pages. Here's how it works:
+
+Parsing CSS: When a web page is loaded, the browser parses the HTML content and identifies any linked or embedded CSS files referenced in the <link> or <style> tags. It then fetches these CSS files.
+
+Building the Document Object Model (DOM): Simultaneously, the browser constructs the Document Object Model (DOM) by parsing the HTML structure of the web page. The DOM represents the hierarchical structure of the HTML elements on the page.
+
+Applying CSS Rules: Once the CSS files are fetched and the DOM is built, the browser begins interpreting the CSS rules. It matches each CSS rule selector (e.g., element names, classes, IDs) with corresponding elements in the DOM.
+
+Specificity and Inheritance: CSS rules are applied based on specificity and inheritance. Specificity determines which CSS rule takes precedence when multiple rules target the same element. Inline styles, IDs, classes, and element selectors have varying levels of specificity. Inheritance dictates that certain CSS properties of a parent element are inherited by its child elements unless explicitly overridden.
+
+Rendering: As CSS rules are interpreted and applied, the browser calculates the final styles for each element. This includes properties such as color, font, margin, padding, border, and positioning. The browser then renders the visual representation of the web page based on these computed styles.
+
+Layout and Painting: After determining the styles for all elements, the browser performs layout and painting processes to display the web page on the screen. Layout involves calculating the position and size of each element based on its styles and content. Painting refers to the process of rendering pixels on the screen according to the calculated layout.
+
+Handling CSS Updates: If changes are made to the CSS rules (e.g., through user interaction, JavaScript manipulation, or media queries), the browser dynamically updates the styles of affected elements and re-renders the page accordingly.
+
+Overall, CSS interpretation is a crucial aspect of web browser functionality, enabling the consistent and visually appealing presentation of web pages across different devices and browsers.
 
 Page Rendering
 --------------
