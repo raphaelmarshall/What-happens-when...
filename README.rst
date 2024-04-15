@@ -710,4 +710,6 @@ page rendering and painting.
 .. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
 .. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
 
-s
+Foot notes:
+- It is crucial to note that Web servers is for static content and Application servers for dynamic
+- All servers are nothing but a computer
