@@ -689,6 +689,20 @@ the Google homepage. Scripts can cause additional network requests to be
 performed, as well as modify the page or its layout, causing another round of
 page rendering and painting.
 
+DNS RESOLUTION
+-----------------
+   - The browser sends a DNS (Domain Name System) query throuhg DNS lookup ```nslookup google.com``` to a *DNS resolver* to translate the domain name "www.google.com" into an IP address.
+   - When a DNS resolver needs to resolve a domain name, it first queries  the
+its cache for a cached entry for "www.google.com" to see if it has previously resolved the IP address and return the ip to the browser if found else, resolver proceed to query the root nameservers to find the authoritative nameservers for the top-level domain (TLD e.g .com) ![](https://www.netnod.se/sites/default/files/styles/banner/public/2018-06/ROOT%20%281%29.png?itok=Qmc-T9fk) <sub>from www.netnod.se</sub><br>
+ of the domain in question. The TLD nameservers then provide the authoritative nameservers(the server that hold the A record) for the specific domain.
+
+   - The root server responds with the IP address of the TLD nameserver responsible for the ".com" TLD.
+The resolver then queries this TLD nameserver for the authoritative nameserver for "google.com".
+   - The TLD nameserver responds with the IP address of Google's authoritative nameserver.The resolver sends a DNS query to Google's authoritative nameserver, requesting the IP address of "www.google.com".
+   - Google's authoritative nameserver responds with the IP address associated with "www.google.com".The resolver caches the IP address obtained for "www.google.com" for future use.
+   - This IP is added to the destination IP of the TCP/IP datagram and used to make request to the server(load balancer, backend or frontend)
+ - In front of theses servers are set of security device which may include firewall and SSL/TLS as well as any other security service
+
 .. _`Creative Commons Zero`: https://creativecommons.org/publicdomain/zero/1.0/
 .. _`"CSS lexical and syntax grammar"`: http://www.w3.org/TR/CSS2/grammar.html
 .. _`Punycode`: https://en.wikipedia.org/wiki/Punycode
