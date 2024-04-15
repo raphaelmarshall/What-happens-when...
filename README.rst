@@ -622,6 +622,9 @@ any invalid content and go on.
 CSS interpretation
 ------------------
 
+* CSS, or “Cascading Style Sheets,” is used for styling and laying out webpages. 
+  It can be used to adjust content size, spacing, color and font or add decorative features, 
+  such as animations or split content into columns.
 * Parse CSS files, ``<style>`` tag contents, and ``style`` attribute
   values using `"CSS lexical and syntax grammar"`_
 * Each CSS file is parsed into a ``StyleSheet object``, where each object
@@ -677,6 +680,9 @@ GPU Rendering
 
 Window Server
 -------------
+web server stores and delivers files to browsers, making your site accessible to users. 
+The web server is responsible for finding where the static content corresponding to the 
+address asked for is living, and for serving it as an HTTP, or HTTPS response.
 
 Post-rendering and user-induced execution
 -----------------------------------------
