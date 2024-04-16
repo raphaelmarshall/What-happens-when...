@@ -27,17 +27,49 @@ Table of Contents
 
 The "g" key is pressed
 ----------------------
+
 The following sections explain the physical keyboard actions
-and the OS interrupts. When you press the key "g" the browser receives the
-event and the auto-complete functions kick in.
-Depending on your browser's algorithm and if you are in
-private/incognito mode or not various suggestions will be presented
-to you in the dropdown below the URL bar. Most of these algorithms sort
-and prioritize results based on search history, bookmarks, cookies, and
-popular searches from the internet as a whole. As you are typing
-"google.com" many blocks of code run and the suggestions will be refined
-with each keypress. It may even suggest "google.com" before you finish typing
-it.
+and the OS interrupts.
+
+When you press the "g" key in a text field in your web browser, specifically
+on a web page (such as search bar or a form input), the browser receives
+the event and the auto-complete functions kick in. Depending on your
+browser's algorithm and if you are in:
+
+*private/incognito mode*
+
+Depending on your customized settings and different web browsers may have their
+own default behaviors. In some browsers settings, data is collected by websites
+visited and the services they use, including Google. Downloads, bookmarks and
+readinglist items will be saved. Some browser such as Chrome won't save
+activities such as
+
+- Your browsing history
+- Cookies and site data
+
+but your activity might still be visible to:
+
+- Your internet service provider
+- Block third-party cookies
+
+In this case, When you press the "g" key, various suggestions will be presented
+to you in the dropdown below the URL bar. All of these suggestions are from
+your bookmarks, cookies and recent search results from your normal mode only
+and not your recent search results in incognito mode.
+Most of these algorithms sort and prioritize results based on search history,
+bookmarks, cookies, and popular searches from the internet as a whole. As you
+are typing "google.com" many blocks of code run and the suggestions will be
+refined with each keypress. It may even suggest "google.com" before you finish
+typing it.
+
+*public/normal mode*
+
+This is similar to the *private/incognito mode* with only a slight difference.
+In the normal mode, When you press the "g" key, various suggestions will be
+presented to you in the dropdown below the URL bar. All of these suggestions
+are from your bookmarks, cookies and recent search results. None of the results
+are from your *private/incognito mode*.
+
 
 The "enter" key bottoms out
 ---------------------------
