@@ -513,7 +513,7 @@ and IIS for Windows.
 Behind the scenes of the Browser
 ----------------------------------
 
-Once the server supplies the resources (HTML, CSS, JS, images, etc.)
+Once the server supplies the resources (HTML, CSS, JS, images,static files etc.)
 to the browser it undergoes the below process:
 
 * Parsing - HTML, CSS, JS
