@@ -397,6 +397,36 @@ TLS handshake
 * From now on the TLS session transmits the application (HTTP) data encrypted
   with the agreed symmetric key.
 
+The role of proxy 
+
+A proxy server plays an important role in the journey of a web request when you
+ type google.com in your browser and press Enter. A proxy acts as an intermediary
+ between the client's browser and the web server, and it can impact the handling
+ and routing of the web request in various ways. Here's an overview of the role of a proxy server in this scenario:
+
+1. Intermediary between Client and Server:
+A proxy server sits between the client (your browser) and the target server (google.com in this case). When you make a request to a website, the request can first pass through the proxy server.
+2. Request Forwarding:
+The proxy server forwards the client's request to the target server, such as google.com.
+Once the server responds to the request, the proxy server forwards the response back to the client.
+3. Caching:
+Proxy servers can cache content, which can improve performance and speed up loading times for frequently accessed websites.
+When a request is made for cached content, the proxy can serve it directly to the client, reducing load times and saving bandwidth.
+4. Content Filtering:
+Proxies can be configured to filter content based on certain criteria, such as blocking access to specific websites or categories of content.
+Organizations and parents might use proxies for web filtering purposes.
+5. Security and Privacy:
+Proxy servers can provide an additional layer of security and privacy by masking the client's IP address when forwarding requests to the server.
+Proxies can also encrypt communication between the client and the server to enhance privacy.
+6. Load Balancing:
+Some proxy servers, known as reverse proxies, distribute incoming traffic across multiple servers to balance the load and improve performance.
+Reverse proxies can also handle SSL termination, which means they handle the decryption of SSL/TLS traffic and pass unencrypted requests to web servers.
+7. Access Control:
+Proxy servers can be configured to enforce access policies, such as allowing or denying access to certain sites or services based on user authentication or IP addresses.
+8. Logging and Monitoring:
+Proxies can log requests and responses for monitoring and auditing purposes, providing insight into user activity and server performance.
+In summary, a proxy server serves as an intermediary between your browser and the web server you are trying to access when you type google.com into your browser. It can provide benefits such as caching, security, privacy, load balancing, content filtering, access control, and monitoring. However, the specific role and configuration of the proxy server can vary depending on the network and its intended purpose.
+
 If a packet is dropped
 ----------------------
 
