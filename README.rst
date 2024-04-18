@@ -523,11 +523,9 @@ to the browser it undergoes the below process:
 Browser
 -------
 
-The browser's functionality is to present the web resource you choose, by
-requesting it from the server and displaying it in the browser window.
-The resource is usually an HTML document, but may also be a PDF,
-image, or some other type of content. The location of the resource is
-specified by the user using a URI (Uniform Resource Identifier).
+A web browser serves as a gateway to the internet, facilitating access to various web resources. 
+When you request a web resource, such as a webpage, image, or document, 
+the browser retrieves it from the server and displays it in a user-friendly format within the browser window.
 
 The way the browser interprets and displays HTML files is specified
 in the HTML and CSS specifications. These specifications are maintained
