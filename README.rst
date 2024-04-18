@@ -689,6 +689,11 @@ the Google homepage. Scripts can cause additional network requests to be
 performed, as well as modify the page or its layout, causing another round of
 page rendering and painting.
 
+Conclusion:
+In a matter of milliseconds, this intricate orchestration of technologies culminates 
+in the delivery of the Google homepage to the browser, ready to embark on the online 
+journey with the world’s most popular search engine.
+
 .. _`Creative Commons Zero`: https://creativecommons.org/publicdomain/zero/1.0/
 .. _`"CSS lexical and syntax grammar"`: http://www.w3.org/TR/CSS2/grammar.html
 .. _`Punycode`: https://en.wikipedia.org/wiki/Punycode
