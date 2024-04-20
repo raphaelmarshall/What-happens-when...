@@ -224,6 +224,49 @@ DNS lookup
 * If the DNS server is on a different subnet, the network library follows
   the ``ARP process`` below for the default gateway IP.
 
+Browser Cache
+------------
+The browser cache is a critical component of web browsing that aims to improve
+performance and reduce network traffic by storing frequently
+accessed resources locally on the user's device.
+Here's a more detailed explanation of the browser cache:
+
+* Purpose: The primary purpose of the browser cache is to speed up the loading
+  time of web pages by storing copies of resources (such as HTML files,
+  images, CSS stylesheets, JavaScript files, and multimedia content)
+  that the browser has previously downloaded from websites.
+  By storing these resources locally, the browser can avoid repeatedly
+  downloading them from the web server every time the user
+  visits the same webpage or navigates between pages on the same site.
+* Cache Management: Browsers implement cache management policies to
+  determine which resources to store in the cache and how
+  long to keep them before they expire and are considered stale.
+  These policies are typically based on HTTP headers sent by the web server,
+  such as the Cache-Control header and the Expires header.
+  The Cache-Control header specifies directives like max-age
+  (the maximum time in seconds that a resource can be cached) and no-cache
+  (indicating that the resource must be revalidated with the server before use),
+  while the Expires header provides an absolute expiration date and time for the resource.
+* Cache Storage: Browser caches are divided into two main types: memory cache and disk cache.
+  The memory cache (also known as the RAM cache) stores small and frequently
+  accessed resources in the computer's random-access memory (RAM) for faster retrieval.
+  The disk cache, on the other hand, stores larger resources and resources that
+  are less frequently accessed on the local hard drive or solid-state drive (SSD).
+* Cache Invalidation: To ensure that users receive the most up-to-date content,
+  browsers periodically check for updates to cached resources by sending
+  conditional requests to the web server using mechanisms
+  like the If-Modified-Since header or the ETag header.
+  If the server responds with a 304 Not Modified status code,
+  indicating that the resource has not changed since the last request,
+  the browser can reuse the cached copy without downloading it again.
+  Otherwise, if the resource has been modified,
+  the server sends a new version of the resource to the browser for caching.
+* Cache-Control Directives: Web developers can use Cache-Control directives to control how
+  browsers cache resources and how they should behave when serving cached content.
+  For example, setting Cache-Control: no-store instructs the
+  browser not to store the resource in the cache at all, while Cache-Control:
+  no-cache tells the browser to revalidate the resource with the server before use,
+  even if it is already in the cache.
 
 ARP process
 -----------
