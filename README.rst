@@ -367,6 +367,22 @@ This send and receive happens multiple times following the TCP connection flow:
    * The other sides ACKs the FIN packet and sends its own FIN
    * The closer acknowledges the other side's FIN with an ACK
 
+Firewall Checks in Action
+
+* Initial Packet Inspection: 
+   As the request leaves your computer, it may first encounter a firewall on your local network (e.g., in your router or as a software firewall on your computer). This      firewall checks the packet details (destination, port number, etc.) against its rules to decide if the request should proceed to the internet.
+   Maintaining State: If you're using a stateful firewall, it remembers that it has allowed an outgoing request to google.com and expects a reply. This way, incoming        packets (replies from Google) that are part of this established connection are allowed through because the firewall recognizes them as responses to a request you made.
+
+* Deep Packet Inspection: 
+   If your firewall is capable of deeper inspection (like NGFW), it might analyze the contents of the data packets to ensure they do not contain malware or malicious        code. This is particularly important for encrypted connections (HTTPS), where more advanced firewalls can decrypt, inspect, and then re-encrypt data to ensure            security without violating privacy.
+
+* Application-Level Inspection: 
+   For an application-level gateway, the HTTP and HTTPS protocols themselves are scrutinized. The firewall ensures that the data conforms to protocol standards, which       helps in preventing attacks that exploit weaknesses in these protocols.
+   Response Handling: Upon the return of the data from Google, the firewall undergoes a similar process. It inspects incoming packets to ensure they are indeed the          responses expected and checks them for any signs of malicious content before letting them pass onto your machine.
+
+During the entire process, the firewall uses a combination of preset rules, dynamic analysis, and historical data about your network activity to ensure that all communications are legitimate and safe. This critical component of network security helps protect your data from threats and unauthorized access, making your online activities safer.
+
+
 TLS handshake
 -------------
 * The client computer sends a ``ClientHello`` message to the server with its
