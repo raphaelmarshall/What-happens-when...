@@ -1,0 +1,83 @@
+Have you ever wondered what goes on behind the scenes when you type a simple web address like “google.com” into your browser and hit Enter? The process may seem straightforward on the surface, but beneath the surface lies a fascinating journey through the complex layers of the internet’s infrastructure. We’ll embark on a journey to unravel the magic behind this seemingly everyday action. From DNS requests to TCP/IP connections, from HTTPS encryption to load balancers and web servers. Lets uncover the secret that brings your favorite websites to your fingertips with just a keystroke. What really happens when you type “google.com” in your browser and press enter– let’s dive in!
+
+DNS Lookup to Find Google’s IP Address
+
+A DNS lookup is the process through which human-readable domain names (www.google.com) are translated into a computer-readable IP address (8.8.8.8).
+
+When you request a domain name, your computer first checks its local cache to see if you’ve previously looked up the address recently; if not, a request to your Recursive DNS Server will be made.
+
+A Recursive DNS Server is usually provided by your ISP, but you can also choose your own. This server also has a local cache of recently looked up domain names. If a match is found in the server’s cache, the process ends there (common for popular sites like Google, Facebook). Otherwise, the search begins with the internet’s root DNS servers.
+
+The root servers serve as the backbone of the internet’s DNS system. They guide you to the appropriate Top Level Domain Server based on your request. For instance, if you ask for www.google.com, the root server identifies the .com Top Level Domain and directs you to the correct TLD server that deals with .com addresses.
+
+The Top Level Domain (TLD) server stores information on where to locate the authoritative server to respond to the DNS query. This authoritative server is commonly referred to as the domain’s nameserver.
+
+An authoritative DNS server is the server that is responsible for storing the DNS records for a particular domain name and where any updates to your domain name DNS records would be made.
+
+Establish a connection via TCP/IP
+
+With the IP address at hand, your browser connects directly to the Google web server using the TCP/IP protocol. TCP (Transmission Control Protocol) and IP (Internet Protocol) work together to decide how data moves on the internet.
+
+Your computer signals the Google server by sending a special TCP packet called a SYN. This starts the TCP handshake between the two devices. The Google server gets the SYN packet and responds with a SYN-ACK packet, saying it’s ready to connect.
+
+Then, your computer sends back an ACK packet, finishing the TCP handshake and officially opening a connection between your computer and the server.
+
+Think of it like knocking on someone’s door. When you knock (send a SYN packet), you’re letting them know you want to talk. If they’re home and willing to talk (they receive the SYN and respond with a SYN-ACK), they’ll open the door slightly to acknowledge your request. Then, when you respond with an acknowledgment (ACK), they fully open the door, and you can start your conversation.
+
+Firewall
+
+Once a connection is established, your request for googl.com meets a firewall before reaching Google's server. The firewall looks at who’s trying to connect, where they’re trying to go, and if anything seems suspicious. If everything checks out, your computer can talk to Google. But if something seems fishy, the firewall says no and blocks the connection. It’s like a bouncer checking your ID before letting you into a fancy club. Even though your computer talks directly to Google’s servers, Google’s firewall checks to make sure it’s okay. By deploying a firewall in front of a web application, a shield is placed between the web application and the Internet. A firewall helps protect web applications by filtering and monitoring HTTP traffic between a web application and the Internet. It typically protects web applications from attacks such as cross-site forgery, cross-site-scripting (XSS), file inclusion, and SQL injection, among others.
+
+Their main functions include:
+
+Monitoring Traffic: Firewalls examine incoming and outgoing network traffic, analyzing data packets to determine if they meet predefined security rules.
+
+Filtering Traffic: They filter network traffic based on various criteria, such as IP addresses, port numbers, and protocols. This filtering helps to block unauthorized access and prevent malicious activities.
+
+Access Control: Firewalls enforce access control policies, allowing or denying specific types of network traffic based on predefined rules. This helps to restrict access to sensitive resources and services.
+
+Logging and Reporting: Firewalls keep logs of network activity, including allowed and denied traffic. These logs are valuable for analyzing security incidents, monitoring network usage, and generating reports.
+
+HTTPS/SSL
+
+HTTP is the set of rules used for communicating with web servers for the transmitting of webpage data, whether that is HTML, Images, Videos, etc.
+
+HTTPS works on a request-response model (meaning the browser sends a request and the server responds to that request), just like in HTTP.
+
+HTTPS is the secure version of HTTP. HTTPS uses a secure sockets layer (SSL) and transport layer security (TLS) certificate for encryption. (These are digital documents that prove the identity of a website. So an encrypted connection can be established.)
+
+Once your computer is inside the firewall and access is granted, it can now share encryption keys directly with the Google server.
+
+The browser sends a request. Then, the Google’s server sends back a special certificate to the browser. This certificate proves the Google’s identity and helps make a safe connection.
+
+Here’s how it goes:
+
+1. Your browser tries to connect to a Google's server using HTTPS.
+
+2. Google’s server responds by sending its SSL/TLS certificate to the browser. This certificate contains the website’s public key (encryption key) and is used to establish a secure connection.
+
+3. Your browser checks the certificate to makes sure the certificate is real and comes from a trusted certificate authority (like GoDaddy, DigiCert, Comodo, etc.). This step is crucial for confirming a website’s authenticity.
+
+The browser and Google’s server make a safe connection by swapping keys once the certificate is verified. The browser uses the server’s public key to encrypt information, and only the server’s private key can decrypt it (that’s the key that unscrambles things).
+
+5. After the connection is secure, everything you send to and get from the website is encrypted so no one else can read it.
+
+6. Google’s server gets your request, decrypts the received data using the private key, processes it, and sends back the requested information, and sends back what you asked for. This info is also encrypted. Your browser decrypts it and shows it to you.
+
+Load Balancers
+
+Big tech companies like Google get a lot of requests from users worldwide. To manage this high volume of traffic efficiently and ensure smooth operations, these companies implement load balancers. Load balancers act as traffic managers, distributing incoming requests across multiple servers to prevent any single server from becoming overwhelmed. They do this by using special rules to decide which server should handle each request.
+
+When a browser attempts to reach google.com, the load balancer gets the request and sends it to one of the servers in Google’s network. Which server it picks depends on the kind of load balancing algorithm being used.
+
+Web server
+
+A web server is a software responsible for managing requests for web pages from clients, like a browser trying to access google.com. When a client sends a request for a web page to a website server, the server deals with the request and sends the suitable response back to the client. So, when attempting to access google.com, Google’s server receives a request from the load balancer. Then, the web server handles the request and generates a response, typically comprising HTML, CSS, and JavaScript files that form the web page. Afterward, the website server sends this response back to the load balancer, which forwards it to the browser. The browser then uses the HTML, CSS, and JavaScript files to show the web page to the user.
+
+Application server and database
+
+Application server manages dynamic content. For example, when you use “google.com,” the application server generates search results based on the query you enter into the search engine.
+
+When you search on Google, your request goes to the load balancer first, which then forwards it to one of the web servers in Google’s network. The web server passes the request to the application server, which handles it and generates the search results. Depending on how complex the search query is, the application server might need to ask a database for the necessary information. For instance, if you’re searching for a specific product on an e-commerce site, the application server might need to get details about that product from a database.
+
+Once the application server has the required data, it sends it back to the website server, which includes it in the response sent back to your browser. Your browser then uses this information to show you the search results.
