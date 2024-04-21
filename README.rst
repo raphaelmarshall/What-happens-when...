@@ -71,7 +71,7 @@ connection, but historically has been over PS/2 or ADB connections.
   (Human Interface Device) device is always declared to be a "low-speed device"
   (USB 2.0 compliance).
 
-- This serial signal is then decoded at the computer's host USB controller, and
+- This serial signal is then decoded to the computer's host USB controller, and
   interpreted by the computer's Human Interface Device (HID) universal keyboard
   device driver.  The value of the key is then passed into the operating
   system's hardware abstraction layer.
