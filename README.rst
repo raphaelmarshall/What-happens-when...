@@ -174,6 +174,31 @@ Parse URL
     - ``Resource``  "/"
         Retrieve main (index) page
 
+ "what_happens_when_your_type_google_com_in_your_browser_and_press_enter"
+ ------------------------------------------------------------------------
+DNS Resolution:
+The browser seeks to translate the human-friendly domain name www.google.com to an IP address, the language of computers.
+A query is sent to a DNS server, which acts like a phonebook for the internet, fetching the corresponding IP address for Google’s server1.
+Server Interaction:
+The client (your browser) requests information from the server (Google).
+Servers are identified by IP addresses.
+
+Server Response:
+The server responds with the requested resources.
+The browser displays the fully-loaded Google homepage.
+
+Rendering the Webpage:
+- Once the server sends back the requested resources (such as HTML, CSS, JavaScript, and images), the browser begins rendering the webpage.
+- The browser parses the HTML to construct the Document Object Model (DOM), which represents the structure of the webpage.
+CSS styles are applied to the DOM elements, determining how they should be displayed visually.
+JavaScript code is executed, allowing for dynamic interactions and modifications on the page.
+- User Interaction:
+Now that the webpage is fully loaded, you can interact with it.
+You can enter search queries, click on links, fill out forms, and perform various actions.
+- The browser handles user input and communicates with the server as needed (e.g., when submitting a form or clicking a link).
+- Caching and Optimization:
+To improve performance, browsers often cache resources like images, stylesheets, and scripts.
+- Cached resources are stored locally, so if you revisit the same website, the browser can load them faster without making additional requests to the server.
 
 Is it a URL or a search term?
 -----------------------------
