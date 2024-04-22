@@ -414,6 +414,14 @@ control`_. This varies depending on the sender; the most common algorithms are
   each packet acknowledged. If a packet is dropped, the window reduces
   exponentially until another packet is acknowledged.
 
+Firewall
+________
+
+The data packets may go via a firewall before making a connection. A firewall is a 
+type of network security system that keeps an eye on and regulates inbound and 
+outgoing traffic in accordance with pre-established security standards. Only approved 
+traffic is permitted to reach the destination server, thanks to the firewall.
+
 HTTP protocol
 -------------
 
