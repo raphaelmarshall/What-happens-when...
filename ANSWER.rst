@@ -1,4 +1,4 @@
-So what really happens when you type Google.com in your computer and press enter ?
+So what happens when you type google.com in your computer and press enter ?
 
 **DOMAIN NAME SYSTEM (DNS)**
 First, the request is sent to the local DNS server. This raises the question, "What is DNS?" Humans are generally not very good at memorizing numbers compared to words. Imagine a world where you couldn't just type "Google.com" and had to know its IP address.
